@@ -16,8 +16,8 @@
 *  Project WIzardで、Create new Projectを選択します  
 ![image](002.png)
 *  Setup defualt forを3Dに設定します。  
-*  Create Projetを選択します。
-  ![image](003.png)
+*  Create Projetを選択します。  
+![image](003.png)
 
 Create Projectを選択する際、ダイアログが表示される事がりますので、NOを選択します。
 
@@ -304,37 +304,37 @@ AnimatorのパラメータはAnimatorビュー左下のParameters（パラメー
 
 ##いつでも呼びだせるアニメーションを追加
 
-最後にユニティちゃんが失敗した際のモーションを追加します。まずは転倒モーションと、落ち込むモーションを追加します。 
+最後にユニティちゃんが失敗した際のモーションを追加します。まずは転倒モーションと、落ち込むモーションを追加します。   
 ![image](069.png)
 
 
 *  プロジェクトビューのUnityChan/Animations/unitychan_DAMAGED01/DAMAGED01をAnimatorビューへドラッグ＆ドロップする。
-*  同じくプロジェクトビューのUnityChan/Animations/unitychan_LOSE00/LOSE00をAnimatorへドラッグ＆ドロップする。 
+*  同じくプロジェクトビューのUnityChan/Animations/unitychan_LOSE00/LOSE00をAnimatorへドラッグ＆ドロップする。  
 ![image](070.png)
 
 
-想定では、転倒後に落ち込む流れを作りたいので、Damage01からLOSE00への矢印を貼ります。状態が切り替わる条件はアニメーションが完了(Exit Time)のまま変更しません。 
-![image](071.png) 
-![image](072.png)
+想定では、転倒後に落ち込む流れを作りたいので、Damage01からLOSE00への矢印を貼ります。状態が切り替わる条件はアニメーションが完了(Exit Time)のまま変更しません。  
+![image](071.png)  
+![image](072.png)  
 
 最後にDAMAGE00への参照を考えます。今までであれば何らかの状態から矢印を貼っていましたが、転倒はどの状態からでも考えられます。しかし、全ての状態からDAMAGE01へ矢印を貼るのは面倒すぎます。その場合は、Any State（エニーステイト） を使用します。
 
  
-![image](073.png)
+![image](073.png)  
 
 Any Stateは、条件が揃えばどこからでも移動出来る状態です。ダメージを受けた場合この項目から状態を切り替えるようにします。
 
-*  Any StateからMake TransitionでDamage01への矢印を作成します。 
-![image](074.png)
-*  Parametersに「＋」を選択し、Triggerを選択。条件名はDEADとします。 
-![image](075.png) 
-![image](076.png)
-*  Any StateからDmaage01への矢印を選択し、conditionの設定を「DEAD」とします。 
-![image](077.png) 
-![image](078.png) 
-![image](079.png) 
-![image](080.png) 
-![image](081.png)
+*  Any StateからMake TransitionでDamage01への矢印を作成します。  
+![image](074.png)  
+*  Parametersに「＋」を選択し、Triggerを選択。条件名はDEADとします。  
+![image](075.png)   
+![image](076.png)  
+*  Any StateからDmaage01への矢印を選択し、conditionの設定を「DEAD」とします。  
+![image](077.png)  
+![image](078.png)  
+![image](079.png)  
+![image](080.png)  
+![image](081.png)  
 
 再生してみましょう。チェックを入れたり外したりする事で、アニメーションが切り替わるのが確認できます。
 <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
@@ -348,11 +348,11 @@ Any Stateは、条件が揃えばどこからでも移動出来る状態です�
 
 まずはコンポーネントを作成します。コンポーネントとはGameObjectを制御するスクリプトです。コンポーネントはその性質上、クラスとも呼ばれる事があります。Unityはコンポーネント間のメッセージのやり取り（メッセージング）と、挙動（ビヘイビア）によってゲームを構築します。
 
-まずはスクリプトを作成してみましょう。 
+まずはスクリプトを作成してみましょう。   
 ![image](082.png)
 
 *  プロジェクトビューのCreateをクリックし、C# Scriptを選択します。
-*  作成したScirptの名前はPlayerとします。 
+*  作成したScirptの名前はPlayerとします。  
 ![image](083.png)
 
 
@@ -381,11 +381,11 @@ public class Player : MonoBehaviour {
 次にシーン内に配置したunitychanに先ほど作成したPlayerコンポーネントを追加します。 
 ![image](084.png)
 
-*  ヒエラルキーのunitychanを選択し、インスペクタービューからAddComponent（アドコンポーネント）をクリック、Script -> Player を選択します。 
-![image](085.png) 
-![image](086.png) 
-![image](087.png) 
-![image](088.png)
+*  ヒエラルキーのunitychanを選択し、インスペクタービューからAddComponent（アドコンポーネント）をクリック、Script -> Player を選択します。   
+![image](085.png)   
+![image](086.png)   
+![image](087.png)   
+![image](088.png)  
 
 うまくいかない場合、 先ほど作成したスクリプトの中の文章が、pbulic class Player ではなく public class NewBehaviourScript となっていないか確認してください。public class **** の****の項目はファイル名と一致している必要があります。
 
@@ -400,26 +400,26 @@ public class Player : MonoBehaviour {
 
 まずシーンのunitychanにRigidbodyを追加します。これは、当たり判定がある物を前進させる場合に必要なものですので、物を動かす場合（特に2D）では必ず付与して下さい。しかし今回は物理演算は不要なので、IsKinematicにチェックを入れます。この項目は、物理演算をしない場合にチェックを入れます。
 
-*  シーンのunitychanを選択し、InspectorのAdd Componentをクリックし、Physics（フィジックス）ー＞Rigidbodyを選択し、rigidbodyを追加します。 
-![image](089.png) 
-![image](090.png) 
-![image](091.png) 
-![image](092.png)
-*  IsKinematicにチェックを入れます。
-![image](093.png) 
-![image](094.png)
+*  シーンのunitychanを選択し、InspectorのAdd Componentをクリックし、Physics（フィジックス）ー＞Rigidbodyを選択し、rigidbodyを追加します。  
+![image](089.png)  
+![image](090.png)  
+![image](091.png)  
+![image](092.png)  
+*  IsKinematicにチェックを入れます。  
+![image](093.png)  
+![image](094.png)  
 
 <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
 
 次にユニティちゃんを前進させます。
 
-*  先ほど作成したPlayer.csをダブルクリックし、monodevelopを起動します。 
+*  先ほど作成したPlayer.csをダブルクリックし、monodevelopを起動します。  
 ![image](095.png) 
 *  以下のコードの(1)を Player.csファイルのpublic class Player : MonoBehaviour { の次の行に追記して下さい。
-*  同様に、以下のコードの(2)を void Update() { の次の行、　} の間に追記して下さい。 
-![image](096.png) 
-![image](097.png) 
-![image](098.png)
+*  同様に、以下のコードの(2)を void Update() { の次の行、　} の間に追記して下さい。   
+![image](096.png)   
+![image](097.png)  
+![image](098.png)  
 
 
 ```
@@ -481,7 +481,7 @@ public class Player : MonoBehaviour {
 同一オブジェクトからGetComponent<コンポーネント名>()で取得する事ができます。今回はAnimatorを取得するので、GetComponent<Animator>()と記載します。
 次に、取得したAnimatorのSLIDEやJUMPにチェックをスクリプトから入れます。この処理は、SetTrigger(パラメータ名)で行います。
 
-つまり、以下のコードを void Update(){から}までの間に追加します。 
+つまり、以下のコードを void Update(){から}までの間に追加します。  
 ![image](099.png)
 
 ```
@@ -498,7 +498,7 @@ GetComponent<Animator>().SetTrigger("JUMP");
 処理の分岐はif文を使用します。　この構文は、if(処理){　の処理の部分が正(true)の場合に、{の次の命令が実行される構文です。
 先ほど記述した内容(3)を削除し、以下のような処理を void Update(){から}の間のいずれかに記述しましょう。
 
-ちなみにFire1は、パッドのボタン１もしくはCtrlキーです。 
+ちなみにFire1は、パッドのボタン１もしくはCtrlキーです。  
 ![image](100.png)
 
 ```
@@ -551,42 +551,42 @@ public class Player : MonoBehaviour {
 
 まずは障害物として、薄い板のオブジェクトを作成します。
 
-*  ヒエラルキービューのCrateを選択し、Cubeを選択します。 
+*  ヒエラルキービューのCrateを選択し、Cubeを選択します。  
 ![image](101.png)
 *  Positionを(0, 0, 10)に設定します。
 *  Scaleの値を(3, 1, 0.05) に設定します。
 *  作成したオブジェクトの名前をLowとします。  
-![image](102.png) 
-![image](103.png)
+![image](102.png)  
+![image](103.png)  
 
  
-![image](104.png)
+![image](104.png)  
 これで、ハードルとなるオブジェクトが出来ました。
 次はオブジェクトの色を変更してみましょう。
 
 色を変更する一番簡単な方法は、マテリアルの色を変更する事です。この作業を行うにはマテリアルが必要です。マテリアルを作成し色を設定します。
 
-*  プロジェクトビューのCreateを選択し、Materialを選択します。 
+*  プロジェクトビューのCreateを選択し、Materialを選択します。  
 ![image](105.png)
-*  ファイルが作成されますので、名前をLowMaterialに変更します。 
-![image](106.png) 
-![image](107.png)
+*  ファイルが作成されますので、名前をLowMaterialに変更します。  
+![image](106.png)  
+![image](107.png)  
 *  作成したマテリアルをヒエラルキービューのLowオブジェクトへドラッグ＆ドロップします。
-*  Lowオブジェクトを選択し、インスペクタービューのLow MaterialのMainColor選択し、カラーピックから色を変更します。
-![image](108.png)
-![image](109.png)
-![image](110.png)
-![image](111.png)
-![image](112.png)
-![image](113.png)
+*  Lowオブジェクトを選択し、インスペクタービューのLow MaterialのMainColor選択し、カラーピックから色を変更します。  
+![image](108.png)  
+![image](109.png)  
+![image](110.png)  
+![image](111.png)  
+![image](112.png)  
+![image](113.png)  
 
 最後に、障害物を貫通出来るように当たり判定をTriggerに設定します。Unityの当たり判定は物理演算に従い貫通しないようになっています。しかし、ハードル等は貫通する想定で考えても良いので、このLow関しては「当たったこと」を確認するためだけに使用します。Triggerに設定するには、***ColliderのオブジェクトのIsTriggerにチェックを入れます。
 
 *  LowオブジェクトのBox ColliderのIs Triggerにチェックを入れます。
 
-![image](114.png)
-![image](115.png)
-![image](116.png)
+![image](114.png)  
+![image](115.png)  
+![image](116.png)  
 
 ##障害物を簡単に量産可能にする
 
@@ -595,8 +595,8 @@ public class Player : MonoBehaviour {
 *  Lowオブジェクトを選択し、プロジェクトビューへドラッグ＆ドロップします。
 
 
-![image](117.png)
-![image](118.png)
+![image](117.png)  
+![image](118.png)  
 
 
 #障害物を回避する
@@ -617,7 +617,7 @@ public class Player : MonoBehaviour {
 *  (4)で記述したコードの {と}の間に、コード(5)を記述します。
 
 
-![image](119.png)
+![image](119.png)  
 
 
 ```
