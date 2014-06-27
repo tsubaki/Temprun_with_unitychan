@@ -11,22 +11,27 @@
 
 まずはUnityエディタを起動します。エディタを起動すると場合によってはカッコ良いデモが出るかもしれません。今回は新しくゲームを作成するので、プロジェクトを新規作成します。
 
-*  メニューバーのFile>New Projectを選択します。
-*  Project WIzardで、Create new Projectを選択します
-*  Setup defualt forを3Dに設定します。
+*  メニューバーのFile>New Projectを選択します。  
+![image](001.png)
+*  Project WIzardで、Create new Projectを選択します  
+![image](002.png)
+*  Setup defualt forを3Dに設定します。  
 *  Create Projetを選択します。
+  ![image](003.png)
 
-Create Projectを選択した時、
+Create Projectを選択する際、ダイアログが表示される事がりますので、NOを選択します。
 
 ##画面を一致させる
 
 画面を一致させるために、レイアウト情報を一致させます。
 
-*  プロジェクトを **3Dモード** で作成
-*  右端の項目を **2 by 3** に設定
+*  プロジェクトを **3Dモード** で作成  
+*  右端の項目を **2 by 3** に設定  
 *  Projectビューを **One Column Layout** へ変更
 *  画面左上の **CenterをPivot**、**LocalをGloval** へ変更
 *  Gameビューの **Free Aspect** を **4:3** へ設定
+
+![image](004.png)
 
 #エディタの説明
 
@@ -74,7 +79,8 @@ Inspector View（インスペクター・ビュー）と読みます。
 
 まず、新しくシーンを作成します。シーンの保存の有無を聞かれる場合がありますが、Noとして下さい。
 
-*  **File -> New Scene を選択**して下さい。
+*  **File -> New Scene を選択**して下さい。  
+![image](005.png)
 
 シーンを作成すると、Main Cameraが一つのみの簡単なシーンが作成されます。とりあえず、このシーンを保存しましょう。
 
@@ -519,6 +525,10 @@ public class Player : MonoBehaviour {
 		if( Input.GetButtonDown("Fire1")){
 			GetComponent<Animator>().SetTrigger("JUMP");
 		}
+		
+		if( Input.GetButtonDown("Fire2")){
+			GetComponent<Animator>().SetTrigger("SLIDE");
+		}
 	}
 
 	// (4)
@@ -579,6 +589,7 @@ if( isRun == true )
 ```
 
 ■完成形
+
 ```
 using UnityEngine;
 using System.Collections;
@@ -601,6 +612,10 @@ public class Player : MonoBehaviour {
 		//(3)
 		if( Input.GetButtonDown("Fire1")){
 			GetComponent<Animator>().SetTrigger("JUMP");
+		}
+		
+		if( Input.GetButtonDown("Fire2")){
+			GetComponent<Animator>().SetTrigger("SLIDE");
 		}
 	}
 
@@ -684,6 +699,62 @@ if( (isRun == true) ||
 {
 	GetComponent<Animator>().SetBool ("DEAD", true);
 	speed = 0;
+}
+```
+
+■完成形
+
+```
+using UnityEngine;
+using System.Collections;
+
+public class Player : MonoBehaviour {
+
+	// (1)
+	public float speed = 6;
+
+	void Start () {
+		
+	}
+	
+	void Update () {
+
+		// (2)
+		rigidbody.MovePosition (transform.position + transform.forward * Time.deltaTime * speed);
+
+		
+		//(3)
+		if( Input.GetButtonDown("Fire1")){
+			GetComponent<Animator>().SetTrigger("JUMP");
+		}
+		
+		if( Input.GetButtonDown("Fire2")){
+			GetComponent<Animator>().SetTrigger("SLIDE");
+		}
+	}
+
+	// (4)
+	void OnTriggerEnter (Collider colider)
+	{
+		// (6)
+		var stateInfo = GetComponent<Animator>().GetCurrentAnimatorStateInfo (0);
+		bool isRun = stateInfo.IsName("Base Layer.RUN00_F");
+		//(8)
+		bool isHigh = colider.CompareTag("High");
+		bool isLow = colider.CompareTag("Low");
+		
+		bool isJump = stateInfo.IsName("Base Layer.JUMP00");
+		bool isSlide = stateInfo.IsName("Base Layer.SLIDE00");
+
+		// (10)
+		if( (isRun == true) ||
+		   (isJump == true && isHigh == true) ||
+		   (isSlide == true && isLow == true))
+		{
+			GetComponent<Animator>().SetBool ("DEAD", true);
+			speed = 0;
+		}
+	}
 }
 ```
 
