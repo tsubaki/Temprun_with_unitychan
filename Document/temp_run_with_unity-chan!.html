@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generated-by" content="Markdown PRO, http://markdownpro.com"/>
+<title></title>
+<style type="text/css">
+html,body{margin:0;padding:0;}
+body {padding: 20px}
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,cite,code,del,dfn,em,img,q,s,samp,small,strike,strong,sub,sup,tt,var,dd,dl,dt,li,ol,ul,fieldset,form,label,legend,button,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;font-weight:normal;font-style:normal;font-size:100%;line-height:1;font-family:inherit;}
+table{border-collapse:collapse;border-spacing:0;}
+ol,ul{list-style:none;}
+q:before,q:after,blockquote:before,blockquote:after{content:"";}
+html{overflow-y:scroll;font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+a:focus{outline:thin dotted;}
+a:hover,a:active{outline:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block;}
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1;}
+audio:not([controls]){display:none;}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}
+sup{top:-0.5em;}
+sub{bottom:-0.25em;}
+img{border:0;-ms-interpolation-mode:bicubic;}
+button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle;}
+button,input{line-height:normal;*overflow:visible;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;}
+input[type="search"]{-webkit-appearance:textfield;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;}
+input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}
+textarea{overflow:auto;vertical-align:top;}
+html,body{background-color:#ffffff;}
+body{margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;font-weight:normal;line-height:18px;color:#404040;}
+.container{width:940px;margin-left:auto;margin-right:auto;zoom:1;}.container:before,.container:after{display:table;content:"";zoom:1;*display:inline;}
+.container:after{clear:both;}
+.container-fluid{position:relative;min-width:940px;padding-left:20px;padding-right:20px;zoom:1;}.container-fluid:before,.container-fluid:after{display:table;content:"";zoom:1;*display:inline;}
+.container-fluid:after{clear:both;}
+.container-fluid>.sidebar{float:left;width:220px;}
+.container-fluid>.content{margin-left:240px;}
+a{color:#0069d6;text-decoration:none;line-height:inherit;font-weight:inherit;}a:hover{color:#00438a;text-decoration:underline;}
+.pull-right{float:right;}
+.pull-left{float:left;}
+.hide{display:none;}
+.show{display:block;}
+.row{zoom:1;margin-left:-20px;}.row:before,.row:after{display:table;content:"";zoom:1;*display:inline;}
+.row:after{clear:both;}
+p{font-size:13px;font-weight:normal;line-height:18px;margin-bottom:9px;}p small{font-size:11px;color:#bfbfbf;}
+h1,h2,h3,h4,h5,h6{font-weight:bold;color:#404040;}h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{color:#bfbfbf;}
+h1{margin-bottom:18px;font-size:30px;line-height:36px;}h1 small{font-size:18px;}
+h2{font-size:24px;line-height:36px;}h2 small{font-size:14px;}
+h3,h4,h5,h6{line-height:36px;}
+h3{font-size:18px;}h3 small{font-size:14px;}
+h4{font-size:16px;}h4 small{font-size:12px;}
+h5{font-size:14px;}
+h6{font-size:13px;color:#bfbfbf;text-transform:uppercase;}
+ul,ol{margin:0 0 18px 25px;}
+ul ul,ul ol,ol ol,ol ul{margin-bottom:0;}
+ul{list-style:disc;}
+ol{list-style:decimal;}
+li{line-height:18px;color:#808080;}
+ul.unstyled{list-style:none;margin-left:0;}
+dl{margin-bottom:18px;}dl dt,dl dd{line-height:18px;}
+dl dt{font-weight:bold;}
+dl dd{margin-left:9px;}
+hr{margin:20px 0 19px;border:0;border-bottom:1px solid #eee;}
+strong{font-style:inherit;font-weight:bold;}
+em{font-style:italic;font-weight:inherit;line-height:inherit;}
+.muted{color:#bfbfbf;}
+blockquote{margin-bottom:18px;border-left:5px solid #eee;padding-left:15px;}blockquote p{font-size:14px;font-weight:300;line-height:18px;margin-bottom:0;}
+blockquote small{display:block;font-size:12px;font-weight:300;line-height:18px;color:#bfbfbf;}blockquote small:before{content:'\2014 \00A0';}
+address{display:block;line-height:18px;margin-bottom:18px;}
+code,pre{padding:0 3px 2px;font-family:Monaco, Andale Mono, Courier New, monospace;font-size:12px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+code{padding:1px 3px;}
+pre{background-color:#f5f5f5;display:block;padding:8.5px;margin:0 0 18px;line-height:18px;font-size:12px;border:1px solid #ccc;border:1px solid rgba(0, 0, 0, 0.15);-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;white-space:pre;white-space:pre-wrap;word-wrap:break-word;}
+form{margin-bottom:18px;}
+fieldset{margin-bottom:18px;padding-top:18px;}fieldset legend{display:block;padding-left:150px;font-size:19.5px;line-height:1;color:#404040;*padding:0 0 5px 145px;*line-height:1.5;}
+form .clearfix{margin-bottom:18px;zoom:1;}form .clearfix:before,form .clearfix:after{display:table;content:"";zoom:1;*display:inline;}
+form .clearfix:after{clear:both;}
+label,input,select,textarea{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;font-weight:normal;line-height:normal;}
+label{padding-top:6px;font-size:13px;line-height:18px;float:left;width:130px;text-align:right;color:#404040;}
+form .input{margin-left:150px;}
+input[type=checkbox],input[type=radio]{cursor:pointer;}
+input,textarea,select,.uneditable-input{display:inline-block;width:210px;height:18px;padding:4px;font-size:13px;line-height:18px;color:#808080;border:1px solid #ccc;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;margin:3px 0;*margin-top:0;line-height:normal;border:none;}
+input[type=file]{background-color:#ffffff;padding:initial;border:initial;line-height:initial;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
+input[type=button],input[type=reset],input[type=submit]{width:auto;height:auto;}
+select,input[type=file]{height:27px;line-height:27px;*margin-top:4px;}
+select[multiple]{height:inherit;}
+textarea{height:auto;}
+.uneditable-input{background-color:#ffffff;display:block;border-color:#eee;-webkit-box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.025);-moz-box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.025);box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.025);cursor:not-allowed;}
+:-moz-placeholder{color:#bfbfbf;}
+::-webkit-input-placeholder{color:#bfbfbf;}
+input,textarea{-webkit-transition:border linear 0.2s,box-shadow linear 0.2s;-moz-transition:border linear 0.2s,box-shadow linear 0.2s;-ms-transition:border linear 0.2s,box-shadow linear 0.2s;-o-transition:border linear 0.2s,box-shadow linear 0.2s;transition:border linear 0.2s,box-shadow linear 0.2s;-webkit-box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1);-moz-box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1);box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1);}
+input:focus,textarea:focus{outline:0;border-color:rgba(82, 168, 236, 0.8);-webkit-box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1),0 0 8px rgba(82, 168, 236, 0.6);-moz-box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1),0 0 8px rgba(82, 168, 236, 0.6);box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1),0 0 8px rgba(82, 168, 236, 0.6);}
+input[type=file]:focus,input[type=checkbox]:focus,select:focus{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;outline:1px dotted #666;}
+form div.clearfix.error{background:#fae5e3;padding:10px 0;margin:-10px 0 10px;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}form div.clearfix.error>label,form div.clearfix.error span.help-inline,form div.clearfix.error span.help-block{color:#9d261d;}
+form div.clearfix.error input,form div.clearfix.error textarea{border-color:#c87872;-webkit-box-shadow:0 0 3px rgba(171, 41, 32, 0.25);-moz-box-shadow:0 0 3px rgba(171, 41, 32, 0.25);box-shadow:0 0 3px rgba(171, 41, 32, 0.25);}form div.clearfix.error input:focus,form div.clearfix.error textarea:focus{border-color:#b9554d;-webkit-box-shadow:0 0 6px rgba(171, 41, 32, 0.5);-moz-box-shadow:0 0 6px rgba(171, 41, 32, 0.5);box-shadow:0 0 6px rgba(171, 41, 32, 0.5);}
+form div.clearfix.error .input-prepend span.add-on,form div.clearfix.error .input-append span.add-on{background:#f4c8c5;border-color:#c87872;color:#b9554d;}
+table{width:100%;margin-bottom:18px;padding:0;border-collapse:separate;*border-collapse:collapse;font-size:13px;border:1px solid #ddd;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}table th,table td{padding:10px 10px 9px;line-height:18px;text-align:left;}
+table th{padding-top:9px;font-weight:bold;vertical-align:middle;border-bottom:1px solid #ddd;}
+table td{vertical-align:top;}
+table th+th,table td+td{border-left:1px solid #ddd;}
+table tr+tr td{border-top:1px solid #ddd;}
+table tbody tr:first-child td:first-child{-webkit-border-radius:4px 0 0 0;-moz-border-radius:4px 0 0 0;border-radius:4px 0 0 0;}
+table tbody tr:first-child td:last-child{-webkit-border-radius:0 4px 0 0;-moz-border-radius:0 4px 0 0;border-radius:0 4px 0 0;}
+table tbody tr:last-child td:first-child{-webkit-border-radius:0 0 0 4px;-moz-border-radius:0 0 0 4px;border-radius:0 0 0 4px;}
+table tbody tr:last-child td:last-child{-webkit-border-radius:0 0 4px 0;-moz-border-radius:0 0 4px 0;border-radius:0 0 4px 0;}
+.zebra-striped tbody tr:nth-child(odd) td{background-color:#f9f9f9;}
+.zebra-striped tbody tr:hover td{background-color:#f5f5f5;}
+.zebra-striped .header{cursor:pointer;}.zebra-striped .header:after{content:"";float:right;margin-top:7px;border-width:0 4px 4px;border-style:solid;border-color:#000 transparent;visibility:hidden;}
+.zebra-striped .header:hover:after{visibility:visible;}
+footer{margin-top:17px;padding-top:17px;border-top:1px solid #eee;}
+.page-header{margin-bottom:17px;border-bottom:1px solid #ddd;-webkit-box-shadow:0 1px 0 rgba(255, 255, 255, 0.5);-moz-box-shadow:0 1px 0 rgba(255, 255, 255, 0.5);box-shadow:0 1px 0 rgba(255, 255, 255, 0.5);}.page-header h1{margin-bottom:8px;}
+.close{float:right;color:#000000;font-size:20px;font-weight:bold;line-height:13.5px;text-shadow:0 1px 0 #ffffff;filter:alpha(opacity=20);-khtml-opacity:0.2;-moz-opacity:0.2;opacity:0.2;}.close:hover{color:#000000;text-decoration:none;filter:alpha(opacity=40);-khtml-opacity:0.4;-moz-opacity:0.4;opacity:0.4;}
+
+pre {
+	padding: 0;
+	margin: 10px 0px 10px;
+	overflow: auto; /*--If the Code exceeds the width, a scrolling is available--*/
+	overflow-Y: hidden;  /*--Hides vertical scroll created by IE--*/
+}
+pre code {
+	margin: 5px;  /*--Left Margin--*/
+	padding: 0px;
+	display: block;
+    line-height: 18px;
+}
+.center { text-align:center}
+.left {text-align:left}
+.right {text-align:right}
+
+</style><style type="text/css">
+body{font-size:14px;line-height:1.6;font-family: Helvetica, arial, freesans, clean, sans-serif;padding: 20px;}
+body>*:first-child{margin-top:0!important;}
+body>*:last-child{margin-bottom:0!important;}
+body a:active {outline: none;}
+body a:hover {text-decoration: underline;}
+body a {color: #4183C4;text-decoration: none;}
+body a.absent{color:#c00;}
+body h1, body h2, h3, h4, h5, h6{margin:20px 0 10px;padding:0;font-weight:bold;-webkit-font-smoothing:antialiased;}
+body h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code{font-size:inherit;}
+body h1{font-size:28px;color:#000;}
+body h2{font-size:24px;border-bottom:1px solid #ccc;color:#000;}
+body h3{font-size:18px;}
+body h4{font-size:16px;}
+body h5{font-size:14px;}
+body h6{color:#777;font-size:14px;}
+body p, blockquote, ul, ol, dl, li, table, pre{margin:15px 0;}
+body hr{background:transparent url('../../images/modules/pulls/dirty-shade.png') repeat-x 0 0;border:0 none;color:#ccc;height:4px;padding:0;}
+body>h2:first-child,>h1:first-child,>h1:first-child+h2,>h3:first-child,>h4:first-child,>h5:first-child,>h6:first-child{margin-top:0;padding-top:0;}
+body h1+p, h2+p, h3+p, h4+p, h5+p, h6+p{margin-top:0;}
+body li p.first{display:inline-block;}
+body ul, ol{padding-left:30px;}
+body ul li>:first-child, ol li>:first-child{margin-top:0;}
+body ul li>:last-child, ol li>:last-child{margin-bottom:0;}
+body dl{padding:0;}
+body dl dt{font-size:14px;font-weight:bold;font-style:italic;padding:0;margin:15px 0 5px;}
+body dl dt:first-child{padding:0;}
+body dl dt>:first-child{margin-top:0;}
+body dl dt>:last-child{margin-bottom:0;}
+body dl dd{margin:0 0 15px;padding:0 15px;}
+body dl dd>:first-child{margin-top:0;}
+body dl dd>:last-child{margin-bottom:0;}
+body blockquote{border-left:4px solid #DDD;padding:0 15px;color:#777;}
+body blockquote>:first-child{margin-top:0;}
+body blockquote>:last-child{margin-bottom:0;}
+body table{padding:0;}
+body table tr{border-top:1px solid #ccc;background-color:#fff;margin:0;padding:0;}
+body table tr:nth-child(2n){background-color:#f8f8f8;}
+body table tr th{font-weight:bold;}
+body table tr th, table tr td{border:1px solid #ccc;text-align:left;margin:0;padding:6px 13px;}
+body table tr th>:first-child, table tr td>:first-child{margin-top:0;}
+body table tr th>:last-child, table tr td>:last-child{margin-bottom:0;}
+body img{max-width:100%;}
+body span.frame{display:block;overflow:hidden;}
+body span.frame>span{border:1px solid #ddd;display:block;float:left;overflow:hidden;margin:13px 0 0;padding:7px;width:auto;}
+body span.frame span img{display:block;float:left;}
+body span.frame span span{clear:both;color:#333;display:block;padding:5px 0 0;}
+body span.align-center{display:block;overflow:hidden;clear:both;}
+body span.align-center>span{display:block;overflow:hidden;margin:13px auto 0;text-align:center;}
+body span.align-center span img{margin:0 auto;text-align:center;}
+body span.align-right{display:block;overflow:hidden;clear:both;}
+body span.align-right>span{display:block;overflow:hidden;margin:13px 0 0;text-align:right;}
+body span.align-right span img{margin:0;text-align:right;}
+body span.float-left{display:block;margin-right:13px;overflow:hidden;float:left;}
+body span.float-left span{margin:13px 0 0;}
+body span.float-right{display:block;margin-left:13px;overflow:hidden;float:right;}
+body span.float-right>span{display:block;overflow:hidden;margin:13px auto 0;text-align:right;}
+body code, tt{margin:0 2px;padding:0 5px;white-space:nowrap;border:1px solid #eaeaea;background-color:#f8f8f8;border-radius:3px;}
+body pre>code{margin:0;padding:0;white-space:pre;border:none;background:transparent;}
+body .highlight pre, pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:13px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px;}
+body pre code, pre tt{background-color:transparent;border:none;}
+</style></head>
+<body>
+<h1 id="toc_0">Temp Run with Unity-chan!</h1>
+
+<ul>
+<li> 利用するアセット <a href="http://unity-chan.com/download/guideline.html">http://unity-chan.com/download/guideline.html</a></li>
+<li> 完成ゲーム</li>
+<li> Unity 4.5.1想定</li>
+</ul>
+
+<h1 id="toc_1">環境を揃える</h1>
+
+<h2 id="toc_2">プロジェクトの作成</h2>
+
+<p>まずはUnityエディタを起動します。エディタを起動すると場合によってはカッコ良いデモが出るかもしれません。今回は新しくゲームを作成するので、プロジェクトを新規作成します。</p>
+
+<ul>
+<li> メニューバーのFile&gt;New Projectを選択します。<br/>
+<img src="001.png" alt="image"/></li>
+<li> Project WIzardで、Create new Projectを選択します<br/>
+<img src="002.png" alt="image"/></li>
+<li> Setup defualt forを3Dに設定します。<br/></li>
+<li> Create Projetを選択します。
+<img src="003.png" alt="image"/></li>
+</ul>
+
+<p>Create Projectを選択する際、ダイアログが表示される事がりますので、NOを選択します。</p>
+
+<h2 id="toc_3">画面を一致させる</h2>
+
+<p>画面を一致させるために、レイアウト情報を一致させます。</p>
+
+<ul>
+<li> プロジェクトを <strong>3Dモード</strong> で作成<br/></li>
+<li> 右端の項目を <strong>2 by 3</strong> に設定<br/></li>
+<li> Projectビューを <strong>One Column Layout</strong> へ変更</li>
+<li> 画面左上の <strong>CenterをPivot</strong>、<strong>LocalをGloval</strong> へ変更</li>
+<li> Gameビューの <strong>Free Aspect</strong> を <strong>4:3</strong> へ設定</li>
+</ul>
+
+<p><img src="004.png" alt="image"/></p>
+
+<h1 id="toc_4">エディタの説明</h1>
+
+<p>画面レイアウトが一致した所でエディタを説明します。</p>
+
+<p><img src="Unity%20Editor.png" alt="Unity Editor.png"/></p>
+
+<h2 id="toc_5">Scene Veiw</h2>
+
+<p>Scene View (シーンビュー)と読みます。</p>
+
+<p>シーンビューを説明する前にシーンについて説明します。シーンとはUnityのゲーム開発の基本で、ゲーム内の世界を指します。</p>
+
+<p>この仮想空間・シーン内にプレイヤーや地面・光源、 2DゲームであればUIやボタン、パズルゲームであればパネル・アイコン等を配置し、ゲームを構築していくのがUnity上でのゲームの作り方です。</p>
+
+<p>この配置するオブジェクトは <strong>GameObject(ゲームオブジェクト)</strong> と呼び、コンポーネントを追加する事でどのような振る舞いも可能なコンテナです。</p>
+
+<p>シーンビューはこの仮想空間を眺める窓です。ゲーム開発社はシーンビューよりシーン内に構築されるゲームを眺め・調整しながらゲームを開発することが出来ます。</p>
+
+<h2 id="toc_6">Game View</h2>
+
+<p>Game View（ゲームビュー）と読みます。</p>
+
+<p>ゲームビューは、カメラの機能を持つCameraコンポーネントが撮影した画面です。この撮影結果はそのままゲーム画面となります。</p>
+
+<h2 id="toc_7">Hierarhy View</h2>
+
+<p>Hierarchy View（ヒエラルキー・ビュー）と読みます。</p>
+
+<p>ヒエラルキーはシーン内に配置したオブジェクトを階層的に表示したビューです。この項目から選択する事で、ゲーム内に散らばった様々なオブジェクトに簡単にアクセスすることが出来ます。</p>
+
+<p>またオブジェクトの親子構造を表現する際にも使用されます。</p>
+
+<h2 id="toc_8">Inspector View</h2>
+
+<p>Inspector View（インスペクター・ビュー）と読みます。</p>
+
+<p>この項目は、ゲームオブジェクトが持つ振る舞い・機能の一覧を確認することが出来ます。また、振る舞いの調整等もインスペクタービューより行います。</p>
+
+<h1 id="toc_9">シーンを構築する</h1>
+
+<h2 id="toc_10">シーンの保存</h2>
+
+<p>それではシーンを構築していきましょう。</p>
+
+<p>まず、新しくシーンを作成します。シーンの保存の有無を聞かれる場合がありますが、Noとして下さい。</p>
+
+<ul>
+<li> <strong>File -&gt; New Scene を選択</strong>して下さい。<br/>
+<img src="005.png" alt="image"/></li>
+</ul>
+
+<p>シーンを作成すると、Main Cameraが一つのみの簡単なシーンが作成されます。とりあえず、このシーンを保存しましょう。</p>
+
+<ul>
+<li> <strong>File -&gt; Save Scene を選択</strong>して下さい。<br/>
+<img src="006.png" alt="image"/></li>
+</ul>
+
+<p>ファイル名を聞かれます。名前は <strong>Game</strong> とします。この名前は適当でも良いですが、日本語名は避けておいたほうが無難です。また、出来る限り重複しない名前が良いでしょう。この作業が完了すると、Game.unityファイルが作成されます。
+シーンの保存はUnityで作業を進める上で非常に重要な要素の一つです。ゲーム開発を進める上でこま目に保存する癖をつけましょう。<br/>
+<img src="007.png" alt="image"/></p>
+
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
+
+<h2 id="toc_11">地面を作成</h2>
+
+<p>次に地面とライトを作成します。今回は簡単なゲームをつくるだけなので、簡単にボックスオブジェクトを引き伸ばすだけで何とかします。まずは地面を作成します。</p>
+
+<ul>
+<li>Hierarchy（ヒエラルキー）の <strong>Create(クリエイト)</strong> より<strong>Cube(キューブ)</strong>を選択します。<br/>
+<img src="008.png" alt="image"/></li>
+</ul>
+
+<p>画面に真っ黒なボックスが作成されました。今回のゲームは縦長の地面なので、これを引き伸ばします。</p>
+
+<p>オブジェクトのサイズや位置を変更するには、InspectorのTransformもしくはシーンビューからscale（大きさ）やposition（位置）を移動します。多くのケースではアーティストの感性で操作しやすいシーンビューから操作しますが、今回はTransformから操作します。なお、日本語入力がONになっている場合、文字が入力できないケースが有ります。その際は入力を英字にして下さい。</p>
+
+<ul>
+<li> Cubeを選択し、Transformのpositionを <strong>x:0, y:-0.5, z:30</strong> とします。次にscaleを <strong>x:4, y:1, z:70</strong> に設定します。<br/>
+<img src="009.png" alt="image"/></li>
+<li> 同様に、インスペクタービュー上部の名称を設定する項目でCubeの名前を<strong>Ground</strong>に設定します。<br/>
+<img src="010.png" alt="image"/></li>
+</ul>
+
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
+
+<h2 id="toc_12">ライトを設定</h2>
+
+<p>とりあえず、画面に何かのオブジェクトを配置する事が出来ました。しかしゲームビューを確認するとライトが無く暗いままなので、ライトを作成しましょう。</p>
+
+<ul>
+<li> ヒエラルキービューのCreateボタンを選択し、<strong>Directional Light（ディレクショナルライト）</strong> を選択します。<br/>
+<img src="011.png" alt="image"/></li>
+</ul>
+
+<p>ライトを作成すると、地面の形状がハッキリわかるようになります。ついでに影も付けましょう。</p>
+
+<ul>
+<li> ヒエラルキービューで先ほど作成したDirectional lightを選択し、Shadow Typeを Hard Shadows を設定します。<br/>
+<img src="012.png" alt="image"/><br/>
+<img src="013.png" alt="image"/><br/>
+<img src="014.png" alt="image"/></li>
+</ul>
+
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
+
+<h1 id="toc_13">キャラクターを配置</h1>
+
+<p>次にキャラクターを配置します。</p>
+
+<p>今回はキャラクターにユニティちゃんを使用します。</p>
+
+<p>まずUnityちゃんをダウンロードしインポートしましょう。規約にも書いてありますが、ユニティちゃんを使用する場合、ユニティちゃんマークを載せる必要がある事に注意して下さい。</p>
+
+<ul>
+<li> <a href="http://unity-chan.com/download/guideline.html">http://unity-chan.com/download/guideline.html</a>よりデータをダウンロードします。ダウンロードするのは、<strong>ユニティちゃん データ</strong>です。<br/>
+<img src="015.png" alt="image"/><br/>
+<img src="016.png" alt="image"/><br/>
+<img src="017.png" alt="image"/></li>
+<li> ダウンロードしたパッケージをダブルクリックしてインポートします。<br/>
+<img src="018.png" alt="image"/><br/>
+<img src="019.png" alt="image"/></li>
+</ul>
+
+<p>インポートが完了すると、プロジェクトビューにUnitychanフォルダとWebPlayerTemplatesが追加されます。
+インポートする際、パッケージを配置したフォルダパスに日本語が含まれている場合、インポートに失敗することがあります。デスクトップではなくC:¥直下や適当なフォルダに移動してからパッケージをダブルクリックしてインポートしましょう。<br/>
+<img src="020.png" alt="image"/></p>
+
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
+
+<h2 id="toc_14">ユニティちゃん登場</h2>
+
+<p>インポートしたらユニティちゃんに登場してもらいましょう。<br/>
+<img src="021.png" alt="image"/></p>
+
+<p>正しくユニティちゃんがインポートされている場合、ProjectビューのUnityCan/Modelsの下にunitychan.fbxがあります。このファイルを使用してユニティちゃんをシーンへ登録します。<br/>
+<img src="022.png" alt="image"/></p>
+
+<ul>
+<li> プロジェクトビューのUnityChan/Model/unitychan.fbxをヒエラルキービューへドラッグ＆ドロップします。</li>
+</ul>
+
+<p>シーンにユニティちゃんが配置されました。さっそくシーンを再生してみましょう。Unityではゲームを実行しシーン内のオブジェクトを動かすことを、<strong>シーンを再生する</strong> と言う場合があります。
+シーンを再生するには、シーン再生ボタンをクリックします。シーン再生ボタンはエディタ上の三角ボタンです。</p>
+
+<ul>
+<li> シーン再生ボタンをクリックします。<br/>
+<img src="023.png" alt="image"/><br/>
+<img src="024.png" alt="image"/><br/>
+<img src="025.png" alt="image"/><br/>
+<img src="026.png" alt="image"/> 
+<img src="027.png" alt="image"/></li>
+</ul>
+
+<p>何も起きません。ユニティちゃんを描画しているunitychanオブジェクトは「ユニティちゃんを描画する」振る舞いを持っては居ますが、アニメーションを再生する機能が実行されていません。今度はアニメーションを再生するように調整しようと思います。</p>
+
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
+
+<h2 id="toc_15">Animator Controllerの作成</h2>
+
+<p>ユニティのアニメーションは現在はmecanim(メカニム)と呼ばれるシステムにより管理されています。mecanimはノードベースのアニメーション管理システムで、パラメータを与えると自身が行うべきアニメーションを選択して実行する性質を持ちます。まずはmecanimを管理するAnimator Controller（アニメーターコントローラー）を作成します。</p>
+
+<ul>
+<li> プロジェクトビューのCreateよりAnimator Controllerを選択します。<br/>
+<img src="028.png" alt="image"/><br/></li>
+<li> 作成したファイル名は <strong>ucAC</strong> とします。<br/>
+<img src="029.png" alt="image"/><br/>
+<img src="030.png" alt="image"/><br/></li>
+</ul>
+
+<p>ACはAnimatorControllerの略です。基本的に業務で使う上では略さない方が良いのですが、今回は面倒なので略します。</p>
+
+<p>次に、作成したucACをシーン内に配置したユニティちゃんに登録します。<br/>
+<img src="031.png" alt="image"/>  </p>
+
+<ul>
+<li> ucACを選択して、ヒエラルキービュー内に先ほど配置したunitychanへドラッグ＆ドロップします。</li>
+</ul>
+
+<p>unitychanを選択した際に、InspectorのAnimatorコンポーネントのControllerにucACが登録されていれば成功です。<br/>
+<img src="032.png" alt="image"/>  </p>
+
+<p>なお、今回のモーションではモーション内で座標の移動を行っていませんので、モーション内でキャラクターを動かす設定の Apply Root Motionのチェックを外しておきます。</p>
+
+<ul>
+<li> AnimatorのApply Root Motionのチェックを外します。<br/>
+<img src="033.png" alt="image"/><br/></li>
+</ul>
+
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
+
+<h2 id="toc_16">Animatorへのアニメーション追加</h2>
+
+<p>Animatorの挙動を設定しましょう。Animatorの設定はAnimatorビューから行います。この項目は非常にややこしいので、よく聞いて下さい。</p>
+
+<ul>
+<li> ヒエラルキービューのunitychanを選択します。</li>
+<li> インスペクタービューからAnimatorからucACをダブルクリックし、Animatorビューを開きます。<br/>
+<img src="034.png" alt="image"/><br/>
+<img src="035.png" alt="image"/><br/>
+<img src="036.png" alt="image"/><br/></li>
+</ul>
+
+<p>これでアニメーションを追加する準備が整いました。今のところ、ANY STATEが一つあるだけのノードが確認出来ます。では、走るモーションを追加します。<br/>
+<img src="037.png" alt="image"/><br/>
+<img src="038.png" alt="image"/>  </p>
+
+<ul>
+<li> プロジェクトビューのUnityChan/Animations/unitychan<em>RUN00</em>F/RUN00_Fを選択し、Animatorビューの適当な位置（真ん中付近が良いでしょう）へドラッグ＆ドロップします。<br/>
+<img src="039.png" alt="image"/><br/></li>
+</ul>
+
+<p>再生してみましょう。ユニティちゃんが走りだす事が確認出来ます。<br/>
+<img src="040.png" alt="image"/>  </p>
+
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
+
+<h2 id="toc_17">モーションの切替</h2>
+
+<p>続いて行きましょう。ジャンプとスライディングのモーションを追加します。<br/>
+<img src="041.png" alt="image"/></p>
+
+<p>ジャンプは、UnityChan/Animations/unitychan<em>JUMP00/Jump00、スライディングはUnityChan/Animations/unitychan</em>SLIDE00/SLIDE00にあります。早速先ほどの方法を使ってAnimatorへ登録しましょう。<br/>
+<img src="042.png" alt="image"/><br/>
+<img src="043.png" alt="image"/></p>
+
+<ul>
+<li> Jump00とSLIDE00アニメーションをAnimatorビューへドラッグ＆ドロップし、ucACへ登録します。</li>
+</ul>
+
+<p>早速再生してみてください。今度もRUn00が実行され、先ほど登録したジャンプやスライディングのモーションは再生されません。Animatorは、<strong>Set As Default</strong>で指定したアニメーションを最初に再生し、状態（state）の変更が無ければそのまま同じアニメーションを再生し続けます。<br/>
+<img src="044.png" alt="image"/></p>
+
+<p>状態を切り替えるギミックを追加します。この状態が切り替わることをTransition（トランジション）と言います。まず、スライディングと走るを交互に切り替える機能を追加しましょう。少し複雑な手順なのでよく見ていて下さい。</p>
+
+<ul>
+<li> AnimatorビューのRun00_Fを選択し、右クリックからMake Transitionを選択、SLIDE00へドラッグ＆ドロップします。<br/>
+<img src="045.png" alt="image"/><br/>
+<img src="046.png" alt="image"/></li>
+<li> AnimatorビューのSLIDE00を選択し、右クリックからMake Transitionを選択、Run00_Fへドラッグ＆ドロップします。<br/>
+<img src="047.png" alt="image"/><br/>
+<img src="048.png" alt="image"/></li>
+</ul>
+
+<p>再生すると、「走る」と「スライディング」のモーションを交互に実行するようになります。<br/>
+<img src="049.png" alt="image"/><br/>
+<img src="050.png" alt="image"/></p>
+
+<p>なお、この矢印を消すには Ctrl（macの場合はCommand）を押しながらDeleteキーです。</p>
+
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
+
+<h2 id="toc_18">モーション切替の制御</h2>
+
+<p>次にスライディングするタイミングを制御できるようにします。現在交互にアニメーションが変化しているのは、状態の切替条件が時間になっているからです。この条件に、「パラメータが変化したタイミング」を追加します。</p>
+
+<p>AnimatorのパラメータはAnimatorビュー左下のParameters（パラメーターズ）から制御します。以下の手順で、パラメータにSLIDEを追加します。</p>
+
+<ol>
+<li> AnimatorビューのParametersの隣の「＋」をクリックし、Triggerを選択します。<br/>
+<img src="051.png" alt="image"/><br/>
+<img src="052.png" alt="image"/></li>
+<li> 名前をSLIDEとします。<br/>
+<img src="053.png" alt="image"/><br/>
+<img src="054.png" alt="image"/></li>
+</ol>
+
+<p>次にアニメーションの状態がRUN00からSLIDE00へ切り替わる条件を変更します。</p>
+
+<ol>
+<li> AnimatorビューでRUN00からSLIDE00への矢印を選択します。<br/>
+<img src="055.png" alt="image"/></li>
+<li> Inspectorを確認し、Conditions（コンディションズ）の設定をExit Time（時間指定）からSLIDEへ変更します。<br/>
+<img src="056.png" alt="image"/><br/>
+<img src="057.png" alt="image"/><br/>
+<img src="058.png" alt="image"/><br/>
+<img src="059.png" alt="image"/><br/>
+<img src="060.png" alt="image"/></li>
+</ol>
+
+<p>再生してみてください。再生中にParametersのSLIDEにチェックを入れると、アニメーションが切り替わるようになるはずです。またアニメーション再生が完了すると、RUN00へ戻る事が分かります。<br/>
+<img src="061.png" alt="image"/></p>
+
+<p>同様の手順でパラメータにJUMPを追加し、ジャンプにチェックを入れるとジャンプするようにしてみましょう。<br/>
+<img src="061.png" alt="image"/><br/>
+<img src="062.png" alt="image"/><br/>
+<img src="063.png" alt="image"/><br/>
+<img src="064.png" alt="image"/><br/>
+<img src="065.png" alt="image"/><br/>
+<img src="066.png" alt="image"/><br/>
+<img src="067.png" alt="image"/> 
+<img src="068.png" alt="image"/></p>
+
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
+
+<h2 id="toc_19">いつでも呼びだせるアニメーションを追加</h2>
+
+<p>最後にユニティちゃんが失敗した際のモーションを追加します。まずは転倒モーションと、落ち込むモーションを追加します。 
+<img src="069.png" alt="image"/></p>
+
+<ul>
+<li> プロジェクトビューのUnityChan/Animations/unitychan_DAMAGED01/DAMAGED01をAnimatorビューへドラッグ＆ドロップする。</li>
+<li> 同じくプロジェクトビューのUnityChan/Animations/unitychan_LOSE00/LOSE00をAnimatorへドラッグ＆ドロップする。 
+<img src="070.png" alt="image"/></li>
+</ul>
+
+<p>想定では、転倒後に落ち込む流れを作りたいので、Damage01からLOSE00への矢印を貼ります。状態が切り替わる条件はアニメーションが完了(Exit Time)のまま変更しません。 
+<img src="071.png" alt="image"/> 
+<img src="072.png" alt="image"/></p>
+
+<p>最後にDAMAGE00への参照を考えます。今までであれば何らかの状態から矢印を貼っていましたが、転倒はどの状態からでも考えられます。しかし、全ての状態からDAMAGE01へ矢印を貼るのは面倒すぎます。その場合は、Any State（エニーステイト） を使用します。</p>
+
+<p><img src="073.png" alt="image"/></p>
+
+<p>Any Stateは、条件が揃えばどこからでも移動出来る状態です。ダメージを受けた場合この項目から状態を切り替えるようにします。</p>
+
+<ul>
+<li> Any StateからMake TransitionでDamage01への矢印を作成します。 
+<img src="074.png" alt="image"/></li>
+<li> Parametersに「＋」を選択し、Triggerを選択。条件名はDEADとします。 
+<img src="075.png" alt="image"/> 
+<img src="076.png" alt="image"/></li>
+<li> Any StateからDmaage01への矢印を選択し、conditionの設定を「DEAD」とします。 
+<img src="077.png" alt="image"/> 
+<img src="078.png" alt="image"/> 
+<img src="079.png" alt="image"/> 
+<img src="080.png" alt="image"/> 
+<img src="081.png" alt="image"/></li>
+</ul>
+
+<p>再生してみましょう。チェックを入れたり外したりする事で、アニメーションが切り替わるのが確認できます。</p>
+
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
+
+<h1 id="toc_20">キャラクターの移動</h1>
+
+<p>次にユニティちゃんを前進させます。前進させる機能はあるにはあるのですが、今回はPlayerを制御するスクリプトを作成して管理してもらう事にしましょう。</p>
+
+<h2 id="toc_21">Playerコンポーネントの作成</h2>
+
+<p>まずはコンポーネントを作成します。コンポーネントとはGameObjectを制御するスクリプトです。コンポーネントはその性質上、クラスとも呼ばれる事があります。Unityはコンポーネント間のメッセージのやり取り（メッセージング）と、挙動（ビヘイビア）によってゲームを構築します。</p>
+
+<p>まずはスクリプトを作成してみましょう。 
+<img src="082.png" alt="image"/></p>
+
+<ul>
+<li> プロジェクトビューのCreateをクリックし、C# Scriptを選択します。</li>
+<li> 作成したScirptの名前はPlayerとします。 
+<img src="083.png" alt="image"/></li>
+</ul>
+
+<p>先ほど作成したPlayer.csをダブルクリックし・monodevelopを起動し、スクリプトを確認します。</p>
+
+<pre><code>using UnityEngine;
+using System.Collections;
+
+public class Player : MonoBehaviour {
+
+    // Use this for initialization
+    void Start () {
+
+    }
+
+    // Update is called once per frame
+    void Update () {
+
+    }
+}
+</code></pre>
+
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
+
+<p>次にシーン内に配置したunitychanに先ほど作成したPlayerコンポーネントを追加します。 
+<img src="084.png" alt="image"/></p>
+
+<ul>
+<li> ヒエラルキーのunitychanを選択し、インスペクタービューからAddComponent（アドコンポーネント）をクリック、Script -&gt; Player を選択します。 
+<img src="085.png" alt="image"/> 
+<img src="086.png" alt="image"/> 
+<img src="087.png" alt="image"/> 
+<img src="088.png" alt="image"/></li>
+</ul>
+
+<p>うまくいかない場合、 先ほど作成したスクリプトの中の文章が、pbulic class Player ではなく public class NewBehaviourScript となっていないか確認してください。public class **** の****の項目はファイル名と一致している必要があります。</p>
+
+<p>また、違うコンポーネントを追加してしまった場合やPlayerコンポーネントを複数追加してしまった場合は、コンポーネント右上の歯車をクリックし、 Remove Component を選択します。</p>
+
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
+
+<h2 id="toc_22">前進させる</h2>
+
+<p>ユニティちゃんを前進させます。</p>
+
+<p>まずシーンのunitychanにRigidbodyを追加します。これは、当たり判定がある物を前進させる場合に必要なものですので、物を動かす場合（特に2D）では必ず付与して下さい。しかし今回は物理演算は不要なので、IsKinematicにチェックを入れます。この項目は、物理演算をしない場合にチェックを入れます。</p>
+
+<ul>
+<li> シーンのunitychanを選択し、InspectorのAdd Componentをクリックし、Physics（フィジックス）ー＞Rigidbodyを選択し、rigidbodyを追加します。 
+<img src="089.png" alt="image"/> 
+<img src="090.png" alt="image"/> 
+<img src="091.png" alt="image"/> 
+<img src="092.png" alt="image"/></li>
+<li> IsKinematicにチェックを入れます。
+<img src="093.png" alt="image"/> 
+<img src="094.png" alt="image"/></li>
+</ul>
+
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
+
+<p>次にユニティちゃんを前進させます。</p>
+
+<ul>
+<li> 先ほど作成したPlayer.csをダブルクリックし、monodevelopを起動します。 
+<img src="095.png" alt="image"/> </li>
+<li> 以下のコードの(1)を Player.csファイルのpublic class Player : MonoBehaviour { の次の行に追記して下さい。</li>
+<li> 同様に、以下のコードの(2)を void Update() { の次の行、　} の間に追記して下さい。 
+<img src="096.png" alt="image"/> 
+<img src="097.png" alt="image"/> 
+<img src="098.png" alt="image"/></li>
+</ul>
+
+<pre><code>// (1)
+public float speed = 6;
+
+// (2)
+rigidbody.MovePosition (transform.position + transform.forward * Time.deltaTime * speed);
+</code></pre>
+
+<p>補足しておくと、Updateの{から}内に記述したソースコードは、毎フレーム呼び出され実行されます。そのため今回記述した(2)の処理は毎フレームSpeedで指定した速度の分だけ前進するといった内容になります。</p>
+
+<p>もう少し正しく言えば、Playerの座標(transform.position) に オブジェクトの前方(transform.forward) × 速度(speed) の分を足した座標へマイフレーム移動しています。</p>
+
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
+
+<p>■完成形</p>
+
+<pre><code>using UnityEngine;
+using System.Collections;
+
+public class Player : MonoBehaviour {
+
+    // (1)
+    public float speed = 6;
+
+    void Start () {
+
+    }
+
+    void Update () {
+
+        // (2)
+        rigidbody.MovePosition (transform.position + transform.forward * Time.deltaTime * speed);
+
+    }
+}
+</code></pre>
+
+<h2 id="toc_23">カメラを追随させる</h2>
+
+<p>このままでは、カメラを放置してユニティちゃんが走りだしてしまいます。カメラを追随させる一番簡単な方法は、ユニティちゃんの子オブジェクトとしてカメラを配置する事です。カメラをユニティちゃんの子オブジェクトとして配置しましょう。</p>
+
+<ul>
+<li> ヒエラルキービューのunitychanへMainCameraをドラッグ＆ドロップして親子構造を作ります。</li>
+<li> MainCameraのpositionを(0, 2.3, -3)、rotationを( 26, 0, 0)を設定します。</li>
+</ul>
+
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
+
+<h2 id="toc_24">ジャンプ・スライディングする</h2>
+
+<p>次にボタンを押すとジャンプ・スライディングするように設定します。</p>
+
+<p>ジャンプ・スライディングさせるには、Playerコンポーネントから別のコンポーネントへアクセスする必要があります。</p>
+
+<p>同一オブジェクトからGetComponent&lt;コンポーネント名&gt;()で取得する事ができます。今回はAnimatorを取得するので、GetComponent<Animator>()と記載します。
+次に、取得したAnimatorのSLIDEやJUMPにチェックをスクリプトから入れます。この処理は、SetTrigger(パラメータ名)で行います。</p>
+
+<p>つまり、以下のコードを void Update(){から}までの間に追加します。 
+<img src="099.png" alt="image"/></p>
+
+<pre><code>//(3)
+GetComponent&lt;Animator&gt;().SetTrigger(&quot;JUMP&quot;);
+</code></pre>
+
+<p>シーンを再生しましょう。ユニティちゃんがウサギの如く跳ねながら前進していくのが分かります。これは、毎フレームJUMPにチェックが入っているのが原因です。この対策に、入力があった場合のみJUMPにチェックが入るように修正します。</p>
+
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
+
+<p>ボタンの入力を待ち受けるには、Input.GetButtonDownがあるかを判断するのが良さそうです。　</p>
+
+<p>処理の分岐はif文を使用します。　この構文は、if(処理){　の処理の部分が正(true)の場合に、{の次の命令が実行される構文です。
+先ほど記述した内容(3)を削除し、以下のような処理を void Update(){から}の間のいずれかに記述しましょう。</p>
+
+<p>ちなみにFire1は、パッドのボタン１もしくはCtrlキーです。 
+<img src="100.png" alt="image"/></p>
+
+<pre><code>//(3)
+if( Input.GetButtonDown(&quot;Fire1&quot;)){
+    GetComponent&lt;Animator&gt;().SetTrigger(&quot;JUMP&quot;);
+}
+</code></pre>
+
+<p>同様の手順で、Fire2ボタンでSLIDEするようにしてみましょう。
+Fire2はAltです。上手くいけば、AltとCtrlでジャンプ・スライディングするようになります。</p>
+
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
+
+<p>■完成形</p>
+
+<pre><code>using UnityEngine;
+using System.Collections;
+
+public class Player : MonoBehaviour {
+
+    // (1)
+    public float speed = 6;
+
+    void Start () {
+
+    }
+
+    void Update () {
+
+        // (2)
+        rigidbody.MovePosition (transform.position + transform.forward * Time.deltaTime * speed);
+
+
+        //(3)
+        if( Input.GetButtonDown(&quot;Fire1&quot;)){
+            GetComponent&lt;Animator&gt;().SetTrigger(&quot;JUMP&quot;);
+        }
+    }
+}
+</code></pre>
+
+<h1 id="toc_25">障害物を配置する</h1>
+
+<p>ジャンプとスライディングが出来るようになったので、今度は障害物を配置してみましょう。</p>
+
+<h2 id="toc_26">障害物を作成</h2>
+
+<p>まずは障害物として、薄い板のオブジェクトを作成します。</p>
+
+<ul>
+<li> ヒエラルキービューのCrateを選択し、Cubeを選択します。 
+<img src="101.png" alt="image"/></li>
+<li> Positionを(0, 0, 10)に設定します。</li>
+<li> Scaleの値を(3, 1, 0.05) に設定します。</li>
+<li> 作成したオブジェクトの名前をLowとします。<br/>
+<img src="102.png" alt="image"/> 
+<img src="103.png" alt="image"/></li>
+</ul>
+
+<p><img src="104.png" alt="image"/>
+これで、ハードルとなるオブジェクトが出来ました。
+次はオブジェクトの色を変更してみましょう。</p>
+
+<p>色を変更する一番簡単な方法は、マテリアルの色を変更する事です。この作業を行うにはマテリアルが必要です。マテリアルを作成し色を設定します。</p>
+
+<ul>
+<li> プロジェクトビューのCreateを選択し、Materialを選択します。 
+<img src="105.png" alt="image"/></li>
+<li> ファイルが作成されますので、名前をLowMaterialに変更します。 
+<img src="106.png" alt="image"/> 
+<img src="107.png" alt="image"/></li>
+<li> 作成したマテリアルをヒエラルキービューのLowオブジェクトへドラッグ＆ドロップします。</li>
+<li> Lowオブジェクトを選択し、インスペクタービューのLow MaterialのMainColor選択し、カラーピックから色を変更します。
+<img src="108.png" alt="image"/>
+<img src="109.png" alt="image"/>
+<img src="110.png" alt="image"/>
+<img src="111.png" alt="image"/>
+<img src="112.png" alt="image"/>
+<img src="113.png" alt="image"/></li>
+</ul>
+
+<p>最後に、障害物を貫通出来るように当たり判定をTriggerに設定します。Unityの当たり判定は物理演算に従い貫通しないようになっています。しかし、ハードル等は貫通する想定で考えても良いので、このLow関しては「当たったこと」を確認するためだけに使用します。Triggerに設定するには、***ColliderのオブジェクトのIsTriggerにチェックを入れます。</p>
+
+<ul>
+<li> LowオブジェクトのBox ColliderのIs Triggerにチェックを入れます。</li>
+</ul>
+
+<p><img src="114.png" alt="image"/>
+<img src="115.png" alt="image"/>
+<img src="116.png" alt="image"/></p>
+
+<h2 id="toc_27">障害物を簡単に量産可能にする</h2>
+
+<p>障害物をコピー＆ペーストするのは良いですが、障害物を量産しやすくするためにプレハブ化を行います。プレハブ化を行う事で、特定のオブジェクトを雛形（プレハブ）とし作成・変更を簡単に出来るようになります。プレハブ化を行うには、対象のオブジェクトを選択しプロジェクトビューへドラッグ＆ドロップします。</p>
+
+<ul>
+<li> Lowオブジェクトを選択し、プロジェクトビューへドラッグ＆ドロップします。</li>
+</ul>
+
+<p><img src="117.png" alt="image"/>
+<img src="118.png" alt="image"/></p>
+
+<h1 id="toc_28">障害物を回避する</h1>
+
+<p>障害物とユニティちゃんを連携し、ユニティちゃんが障害物に接触したらゲームオーバーになるようにします。また、ジャンプ中はハードルに接触しないようにします。</p>
+
+<h2 id="toc_29">ブロックと接触したユニティちゃんを転倒させる</h2>
+
+<p>接触したらユニティちゃんが転倒してゲームオーバーするようにします。</p>
+
+<p>接触の判定にはPlayerコンポーネントに機能を追加します。追加する内容は「接触したら呼び出されるイベント」と「イベント内の処理」です。</p>
+
+<p>まずはTriggerに接触した場合に呼び出すイベントをPlayerコンポーネントに定義し、接触した際の処理を定義します。接触した際のイベントは　void OnTriggerEnter (Collider colider)　です。</p>
+
+<ul>
+<li> Playerコンポーネントの void Update(){ ...中略... } の次の行に、 コード(4)を記述します。</li>
+<li> (4)で記述したコードの {と}の間に、コード(5)を記述します。</li>
+</ul>
+
+<p><img src="119.png" alt="image"/></p>
+
+<pre><code>// (4)
+void OnTriggerEnter (Collider colider)
+{
+}
+</code></pre>
+
+<pre><code>// (5)
+GetComponent&lt;Animator&gt;().SetTrigger (&quot;DEAD&quot;);
+speed = 0;
+</code></pre>
+
+<p>■完成形</p>
+
+<pre><code>using UnityEngine;
+using System.Collections;
+
+public class Player : MonoBehaviour {
+
+    // (1)
+    public float speed = 6;
+
+    void Start () {
+
+    }
+
+    void Update () {
+
+        // (2)
+        rigidbody.MovePosition (transform.position + transform.forward * Time.deltaTime * speed);
+
+
+        //(3)
+        if( Input.GetButtonDown(&quot;Fire1&quot;)){
+            GetComponent&lt;Animator&gt;().SetTrigger(&quot;JUMP&quot;);
+        }
+
+        if( Input.GetButtonDown(&quot;Fire2&quot;)){
+            GetComponent&lt;Animator&gt;().SetTrigger(&quot;SLIDE&quot;);
+        }
+    }
+
+    // (4)
+    void OnTriggerEnter (Collider colider)
+    {
+        // (5)
+        GetComponent&lt;Animator&gt;().SetTrigger (&quot;DEAD&quot;);
+        speed = 0;
+    }
+}
+</code></pre>
+
+<h2 id="toc_30">ユニティちゃんに当たり判定を付ける</h2>
+
+<p>再生して見て下さい。接触しても何も反応が無いと思います。
+ユニティちゃんと接触させるには、お互いにコライダーがある必要があります。</p>
+
+<p>ユニティちゃんにコライダーを付与しましょう。</p>
+
+<ul>
+<li> シーン内のUnitychanを選択します。</li>
+<li> インスペクタービューのAdd Componentをクリックします。</li>
+<li> Physics &gt; Sphere Colliderを選択します。</li>
+</ul>
+
+<p>シーンで確認すると、コライダーの位置が若干下になっています。
+このコライダーを変更しましょう。</p>
+
+<ul>
+<li> シーン内のユニティちゃんのSphere ColliderのCenterの値を、(0, 0.7, 0）に設定します。</li>
+<li> colliderのradiusの値を0.7に設定します。</li>
+</ul>
+
+<h2 id="toc_31">オブジェクトを回避可能にする</h2>
+
+<p>ジャンプ中はオブジェクトを接触しても転倒しないようにします。</p>
+
+<p>今回の比較にはAnimatorの状態をそのまま使用しようと思います。プレイヤーのAnimatorの状態を取得し、走る以外の行動中ならブロックに接触しても何も反応させないようにします。</p>
+
+<p>つまり、AnimatorからGetCurrentAnimatorStateInfoで状態を取得し、その値が「RUN」でないなら（ジャンプ中・もしくはスライディング中なら） 処理をスキップします。</p>
+
+<ul>
+<li> Animatorの状態を取得するため、(6)のコードを(4)の { の次の行に記述します。</li>
+<li> 上で作成した判定を利用して、処理をスキップするため、前回書いた内容(5)を(7)のように改造します。</li>
+</ul>
+
+<pre><code>// (6)
+var stateInfo = GetComponent&lt;Animator&gt;().GetCurrentAnimatorStateInfo (0);
+bool isRun = stateInfo.IsName(&quot;Base Layer.RUN00_F&quot;);
+</code></pre>
+
+<pre><code>// (7)
+if( isRun == true )
+{
+    GetComponent&lt;Animator&gt;().SetTrigger (&quot;DEAD&quot;);
+    speed = 0;
+}
+
+</code></pre>
+
+<p>■完成形</p>
+
+<pre><code>using UnityEngine;
+using System.Collections;
+
+public class Player : MonoBehaviour {
+
+    // (1)
+    public float speed = 6;
+
+    void Start () {
+
+    }
+
+    void Update () {
+
+        // (2)
+        rigidbody.MovePosition (transform.position + transform.forward * Time.deltaTime * speed);
+
+
+        //(3)
+        if( Input.GetButtonDown(&quot;Fire1&quot;)){
+            GetComponent&lt;Animator&gt;().SetTrigger(&quot;JUMP&quot;);
+        }
+
+        if( Input.GetButtonDown(&quot;Fire2&quot;)){
+            GetComponent&lt;Animator&gt;().SetTrigger(&quot;SLIDE&quot;);
+        }
+    }
+
+    // (4)
+    void OnTriggerEnter (Collider colider)
+    {
+        // (6)
+        var stateInfo = GetComponent&lt;Animator&gt;().GetCurrentAnimatorStateInfo (0);
+        bool isRun = stateInfo.IsName(&quot;Base Layer.RUN00_F&quot;);
+
+        // (7)
+        if( isRun == true )
+        {
+            GetComponent&lt;Animator&gt;().SetTrigger (&quot;DEAD&quot;);
+            speed = 0;
+        }
+    }
+}
+</code></pre>
+
+<h2 id="toc_32">ジャンプとスライディングで障害物を回避する</h2>
+
+<p>ジャンプとスライディングがあるので、スライディングでも回避する状況を作りましょう。</p>
+
+<p>まずは、障害物を「high(高い)」と「low(低い)」の二種類に分類します。分類の方法は、高さからとっても良いのですが、調整が面倒なのでタグで管理します。</p>
+
+<p>まずはタグを作成します。</p>
+
+<ul>
+<li> メニューのEdit &gt; Project Settins &gt; Tag &amp; Layers を選択します。<br/>
+<img src="120.png" alt="image"/><br/>
+<img src="121.png" alt="image"/></li>
+<li> インスペクタービューのTagsを開き、Elementを2に設定、HighとLowを追加します（頭大文字な点に注意して下さい）。<br/>
+<img src="122.png" alt="image"/><br/>
+<img src="123.png" alt="image"/><br/>
+<img src="124.png" alt="image"/><br/>
+<img src="125.png" alt="image"/></li>
+</ul>
+
+<p>次に、オブジェクトを作成しタグを設定します。</p>
+
+<ul>
+<li> ヒエラルキービューのCrateよりCubeを作成します。<br/>
+<img src="126.png" alt="image"/></li>
+<li> 作成したCubeを選択し、インスペクタービューよりHighをと改名します。<br/>
+<img src="127.png" alt="image"/></li>
+<li> HighのBoxColliderのIsTriggerにチェックを入れます。<br/>
+<img src="132.png" alt="image"/><br/>
+<img src="133.png" alt="image"/></li>
+<li> 作成したHighのPositionを(0, 1, 20)に設定します。<br/>
+<img src="128.png" alt="image"/></li>
+<li> 作成したHighのScaleの値を(3, 0.5, 0.05) に設定します。</li>
+<li> HighのタグをHighに設定します。<br/>
+<img src="129.png" alt="image"/><br/>
+<img src="134.png" alt="image"/></li>
+<li> Highをプロジェクトビューへドラッグ＆ドロップしてプレハブ化します。<br/>
+<img src="130.png" alt="image"/></li>
+</ul>
+
+<p>ついでに、以前作成したLowオブジェクトのタグを変更しておきましょう。</p>
+
+<ul>
+<li> プロジェクトビューのLowプレハブを選択し、インスペクタービューでTagをLowに設定します。</li>
+</ul>
+
+<p><img src="131.png" alt="image"/><br/>
+<img src="135.png" alt="image"/></p>
+
+<p>後は接触対象によりPlayerの振る舞いを変更します。接触対象の情報はOnTriggerEnterの引数（colider）から得ることが出来ます。多くの場合、この文字列に「.（ドット）」を追加する事で、このオブジェクトが持つパラメータや値を取得する事ができます。この機能を使用して接触対象がHighかLowか判定しましょう。</p>
+
+<ul>
+<li> (8)のコードを、(6)の次の行に記述します。</li>
+<li> 以前書いた接触判定(7)を削除し、(9)のように変更します。(8)のコードは、「ジャンプ中に高い物があたったら…」の条件です。条件を指定する場合、 括弧（）で囲った物を先に計算し、 || でどちらかがOKなら、&amp;&amp; で両方OKなら次の行を実行します。これを応用して、以下のように改造します。</li>
+</ul>
+
+<pre><code>//(8)
+bool isHigh = colider.CompareTag(&quot;High&quot;);
+bool isLow = colider.CompareTag(&quot;Low&quot;);
+
+bool isJump = stateInfo.IsName(&quot;Base Layer.JUMP00&quot;);
+bool isSlide = stateInfo.IsName(&quot;Base Layer.SLIDE00&quot;);
+
+</code></pre>
+
+<pre><code>// (9)
+if (isRun == true || 
+    (isJump == true &amp;&amp; isHigh == true))
+{
+    GetComponent&lt;Animator&gt;().SetBool (&quot;DEAD&quot;, true);
+    speed = 0;
+}
+</code></pre>
+
+<p>さらに複雑な条件を追加しましょう。「スライディング中にLowに当たったら」を追加します。
+(9)のコードを(10)に変更します。</p>
+
+<pre><code>// (10)
+if( (isRun == true) ||
+    (isJump == true &amp;&amp; isHigh == true) ||
+    (isSlide == true &amp;&amp; isLow == true))
+{
+    GetComponent&lt;Animator&gt;().SetBool (&quot;DEAD&quot;, true);
+    speed = 0;
+}
+</code></pre>
+
+<p>■完成形</p>
+
+<pre><code>using UnityEngine;
+using System.Collections;
+
+public class Player : MonoBehaviour {
+
+    // (1)
+    public float speed = 6;
+
+    void Start () {
+
+    }
+
+    void Update () {
+
+        // (2)
+        rigidbody.MovePosition (transform.position + transform.forward * Time.deltaTime * speed);
+
+
+        //(3)
+        if( Input.GetButtonDown(&quot;Fire1&quot;)){
+            GetComponent&lt;Animator&gt;().SetTrigger(&quot;JUMP&quot;);
+        }
+
+        if( Input.GetButtonDown(&quot;Fire2&quot;)){
+            GetComponent&lt;Animator&gt;().SetTrigger(&quot;SLIDE&quot;);
+        }
+    }
+
+    // (4)
+    void OnTriggerEnter (Collider colider)
+    {
+        // (6)
+        var stateInfo = GetComponent&lt;Animator&gt;().GetCurrentAnimatorStateInfo (0);
+        bool isRun = stateInfo.IsName(&quot;Base Layer.RUN00_F&quot;);
+        //(8)
+        bool isHigh = colider.CompareTag(&quot;High&quot;);
+        bool isLow = colider.CompareTag(&quot;Low&quot;);
+
+        bool isJump = stateInfo.IsName(&quot;Base Layer.JUMP00&quot;);
+        bool isSlide = stateInfo.IsName(&quot;Base Layer.SLIDE00&quot;);
+
+        // (10)
+        if( (isRun == true) ||
+           (isJump == true &amp;&amp; isHigh == true) ||
+           (isSlide == true &amp;&amp; isLow == true))
+        {
+            GetComponent&lt;Animator&gt;().SetBool (&quot;DEAD&quot;, true);
+            speed = 0;
+        }
+    }
+}
+</code></pre>
+
+<p>これで簡単なゲーム作成のチュートリアルは完了です。</p>
+
+</body>
+</html>

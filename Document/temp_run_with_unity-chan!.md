@@ -142,26 +142,40 @@ Inspector View（インスペクター・ビュー）と読みます。
 
 まずUnityちゃんをダウンロードしインポートしましょう。規約にも書いてありますが、ユニティちゃんを使用する場合、ユニティちゃんマークを載せる必要がある事に注意して下さい。
 
-*  [http://unity-chan.com/download/guideline.html](http://unity-chan.com/download/guideline.html)よりデータをダウンロードします。ダウンロードするのは、**ユニティちゃん データ**です。
-*  ダウンロードしたパッケージをダブルクリックしてインポートします。
+*  [http://unity-chan.com/download/guideline.html](http://unity-chan.com/download/guideline.html)よりデータをダウンロードします。ダウンロードするのは、**ユニティちゃん データ**です。  
+![image](015.png)  
+![image](016.png)  
+![image](017.png)
+*  ダウンロードしたパッケージをダブルクリックしてインポートします。  
+![image](018.png)  
+![image](019.png)
 
 インポートが完了すると、プロジェクトビューにUnitychanフォルダとWebPlayerTemplatesが追加されます。
-インポートする際、パッケージを配置したフォルダパスに日本語が含まれている場合、インポートに失敗することがあります。デスクトップではなくC:¥直下や適当なフォルダに移動してからパッケージをダブルクリックしてインポートしましょう。
+インポートする際、パッケージを配置したフォルダパスに日本語が含まれている場合、インポートに失敗することがあります。デスクトップではなくC:¥直下や適当なフォルダに移動してからパッケージをダブルクリックしてインポートしましょう。  
+![image](020.png)
 
 <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
 
 ##ユニティちゃん登場
 
-インポートしたらユニティちゃんに登場してもらいましょう。
+インポートしたらユニティちゃんに登場してもらいましょう。  
+![image](021.png)
 
-正しくユニティちゃんがインポートされている場合、ProjectビューのUnityCan/Modelsの下にunitychan.fbxがあります。このファイルを使用してユニティちゃんをシーンへ登録します。
+正しくユニティちゃんがインポートされている場合、ProjectビューのUnityCan/Modelsの下にunitychan.fbxがあります。このファイルを使用してユニティちゃんをシーンへ登録します。  
+![image](022.png)
 
 *  プロジェクトビューのUnityChan/Model/unitychan.fbxをヒエラルキービューへドラッグ＆ドロップします。
 
 シーンにユニティちゃんが配置されました。さっそくシーンを再生してみましょう。Unityではゲームを実行しシーン内のオブジェクトを動かすことを、**シーンを再生する** と言う場合があります。
 シーンを再生するには、シーン再生ボタンをクリックします。シーン再生ボタンはエディタ上の三角ボタンです。
 
-*  シーン再生ボタンをクリックします。
+*  シーン再生ボタンをクリックします。  
+![image](023.png)  
+![image](024.png)  
+![image](025.png)  
+![image](026.png) 
+![image](027.png)
+
 
 何も起きません。ユニティちゃんを描画しているunitychanオブジェクトは「ユニティちゃんを描画する」振る舞いを持っては居ますが、アニメーションを再生する機能が実行されていません。今度はアニメーションを再生するように調整しようと思います。
 
@@ -171,20 +185,27 @@ Inspector View（インスペクター・ビュー）と読みます。
 
 ユニティのアニメーションは現在はmecanim(メカニム)と呼ばれるシステムにより管理されています。mecanimはノードベースのアニメーション管理システムで、パラメータを与えると自身が行うべきアニメーションを選択して実行する性質を持ちます。まずはmecanimを管理するAnimator Controller（アニメーターコントローラー）を作成します。
 
-*  プロジェクトビューのCreateよりAnimator Controllerを選択します。
-*  作成したファイル名は **ucAC** とします。
+*  プロジェクトビューのCreateよりAnimator Controllerを選択します。  
+![image](028.png)  
+*  作成したファイル名は **ucAC** とします。  
+![image](029.png)   
+![image](030.png)  
 
 ACはAnimatorControllerの略です。基本的に業務で使う上では略さない方が良いのですが、今回は面倒なので略します。
 
-次に、作成したucACをシーン内に配置したユニティちゃんに登録します。
+
+次に、作成したucACをシーン内に配置したユニティちゃんに登録します。   
+![image](031.png)  
 
 *  ucACを選択して、ヒエラルキービュー内に先ほど配置したunitychanへドラッグ＆ドロップします。
 
-unitychanを選択した際に、InspectorのAnimatorコンポーネントのControllerにucACが登録されていれば成功です。
+unitychanを選択した際に、InspectorのAnimatorコンポーネントのControllerにucACが登録されていれば成功です。   
+![image](032.png)  
 
 なお、今回のモーションではモーション内で座標の移動を行っていませんので、モーション内でキャラクターを動かす設定の Apply Root Motionのチェックを外しておきます。
 
-*  AnimatorのApply Root Motionのチェックを外します。
+*  AnimatorのApply Root Motionのチェックを外します。   
+![image](033.png)  
 
 <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
 
@@ -193,32 +214,49 @@ unitychanを選択した際に、InspectorのAnimatorコンポーネントのCon
 Animatorの挙動を設定しましょう。Animatorの設定はAnimatorビューから行います。この項目は非常にややこしいので、よく聞いて下さい。
 
 *  ヒエラルキービューのunitychanを選択します。
-*  インスペクタービューからAnimatorからucACをダブルクリックし、Animatorビューを開きます。
+*  インスペクタービューからAnimatorからucACをダブルクリックし、Animatorビューを開きます。   
+![image](034.png)     
+![image](035.png)     
+![image](036.png)  
 
-これでアニメーションを追加する準備が整いました。今のところ、ANY STATEが一つあるだけのノードが確認出来ます。では、走るモーションを追加します。
+これでアニメーションを追加する準備が整いました。今のところ、ANY STATEが一つあるだけのノードが確認出来ます。では、走るモーションを追加します。   
+![image](037.png)  
+![image](038.png)  
 
-*  プロジェクトビューのUnityChan/Animations/unitychan_RUN00_F/RUN00_Fを選択し、Animatorビューの適当な位置（真ん中付近が良いでしょう）へドラッグ＆ドロップします。
+*  プロジェクトビューのUnityChan/Animations/unitychan_RUN00_F/RUN00_Fを選択し、Animatorビューの適当な位置（真ん中付近が良いでしょう）へドラッグ＆ドロップします。   
+![image](039.png)  
 
-再生してみましょう。ユニティちゃんが走りだす事が確認出来ます。
+再生してみましょう。ユニティちゃんが走りだす事が確認出来ます。   
+![image](040.png)  
 
 <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
 
 ##モーションの切替
 
-続いて行きましょう。ジャンプとスライディングのモーションを追加します。
+続いて行きましょう。ジャンプとスライディングのモーションを追加します。  
+![image](041.png)
 
-ジャンプは、UnityChan/Animations/unitychan_JUMP00/Jump00、スライディングはUnityChan/Animations/unitychan_SLIDE00/SLIDE00にあります。早速先ほどの方法を使ってAnimatorへ登録しましょう。
+ジャンプは、UnityChan/Animations/unitychan_JUMP00/Jump00、スライディングはUnityChan/Animations/unitychan_SLIDE00/SLIDE00にあります。早速先ほどの方法を使ってAnimatorへ登録しましょう。  
+![image](042.png)  
+![image](043.png)
 
 *  Jump00とSLIDE00アニメーションをAnimatorビューへドラッグ＆ドロップし、ucACへ登録します。
 
-早速再生してみてください。今度もRUn00が実行され、先ほど登録したジャンプやスライディングのモーションは再生されません。Animatorは、**Set As Default**で指定したアニメーションを最初に再生し、状態（state）の変更が無ければそのまま同じアニメーションを再生し続けます。
+早速再生してみてください。今度もRUn00が実行され、先ほど登録したジャンプやスライディングのモーションは再生されません。Animatorは、**Set As Default**で指定したアニメーションを最初に再生し、状態（state）の変更が無ければそのまま同じアニメーションを再生し続けます。  
+![image](044.png)
 
 状態を切り替えるギミックを追加します。この状態が切り替わることをTransition（トランジション）と言います。まず、スライディングと走るを交互に切り替える機能を追加しましょう。少し複雑な手順なのでよく見ていて下さい。
 
-*  AnimatorビューのRun00_Fを選択し、右クリックからMake Transitionを選択、SLIDE00へドラッグ＆ドロップします。
-*  AnimatorビューのSLIDE00を選択し、右クリックからMake Transitionを選択、Run00_Fへドラッグ＆ドロップします。
+*  AnimatorビューのRun00_Fを選択し、右クリックからMake Transitionを選択、SLIDE00へドラッグ＆ドロップします。  
+![image](045.png)  
+![image](046.png)
+*  AnimatorビューのSLIDE00を選択し、右クリックからMake Transitionを選択、Run00_Fへドラッグ＆ドロップします。  
+![image](047.png)  
+![image](048.png)
 
-再生すると、「走る」と「スライディング」のモーションを交互に実行するようになります。
+再生すると、「走る」と「スライディング」のモーションを交互に実行するようになります。  
+![image](049.png)  
+![image](050.png)
 
 なお、この矢印を消すには Ctrl（macの場合はCommand）を押しながらDeleteキーです。
 
@@ -230,36 +268,73 @@ Animatorの挙動を設定しましょう。Animatorの設定はAnimatorビュ�
 
 AnimatorのパラメータはAnimatorビュー左下のParameters（パラメーターズ）から制御します。以下の手順で、パラメータにSLIDEを追加します。
 
-1.  AnimatorビューのParametersの隣の「＋」をクリックし、Triggerを選択します。
-2.  名前をSLIDEとします。
+1.  AnimatorビューのParametersの隣の「＋」をクリックし、Triggerを選択します。  
+![image](051.png)  
+![image](052.png)
+2.  名前をSLIDEとします。  
+![image](053.png)  
+![image](054.png)
 
 次にアニメーションの状態がRUN00からSLIDE00へ切り替わる条件を変更します。
 
-1.  AnimatorビューでRUN00からSLIDE00への矢印を選択します。
-2.  Inspectorを確認し、Conditions（コンディションズ）の設定をExit Time（時間指定）からSLIDEへ変更します。
+1.  AnimatorビューでRUN00からSLIDE00への矢印を選択します。  
+![image](055.png)
+2.  Inspectorを確認し、Conditions（コンディションズ）の設定をExit Time（時間指定）からSLIDEへ変更します。  
+![image](056.png)  
+![image](057.png)  
+![image](058.png)  
+![image](059.png)  
+![image](060.png)
 
-再生してみてください。再生中にParametersのSLIDEにチェックを入れると、アニメーションが切り替わるようになるはずです。またアニメーション再生が完了すると、RUN00へ戻る事が分かります。
+再生してみてください。再生中にParametersのSLIDEにチェックを入れると、アニメーションが切り替わるようになるはずです。またアニメーション再生が完了すると、RUN00へ戻る事が分かります。  
+![image](061.png)
 
-同様の手順でパラメータにJUMPを追加し、ジャンプにチェックを入れるとジャンプするようにしてみましょう。
+同様の手順でパラメータにJUMPを追加し、ジャンプにチェックを入れるとジャンプするようにしてみましょう。  
+![image](061.png)  
+![image](062.png)  
+![image](063.png)  
+![image](064.png)  
+![image](065.png)  
+![image](066.png)  
+![image](067.png) 
+![image](068.png)
+
 
 <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
 
 ##いつでも呼びだせるアニメーションを追加
 
-最後にユニティちゃんが失敗した際のモーションを追加します。まずは転倒モーションと、落ち込むモーションを追加します。
+最後にユニティちゃんが失敗した際のモーションを追加します。まずは転倒モーションと、落ち込むモーションを追加します。 
+![image](069.png)
 
-*  UnityChan/Animations/unitychan_DAMAGED01/DAMAGED01をAnimatorへドラッグ＆ドロップする。
-*  UnityChan/Animations/unitychan_LOSE00/LOSE00をAnimatorへドラッグ＆ドロップする。
 
-想定では、転倒後に落ち込む流れを作りたいので、Damage01からLOSE00への矢印を貼ります。状態が切り替わる条件はアニメーションが完了(Exit Time)のまま変更しません。
+*  プロジェクトビューのUnityChan/Animations/unitychan_DAMAGED01/DAMAGED01をAnimatorビューへドラッグ＆ドロップする。
+*  同じくプロジェクトビューのUnityChan/Animations/unitychan_LOSE00/LOSE00をAnimatorへドラッグ＆ドロップする。 
+![image](070.png)
+
+
+想定では、転倒後に落ち込む流れを作りたいので、Damage01からLOSE00への矢印を貼ります。状態が切り替わる条件はアニメーションが完了(Exit Time)のまま変更しません。 
+![image](071.png) 
+![image](072.png)
 
 最後にDAMAGE00への参照を考えます。今までであれば何らかの状態から矢印を貼っていましたが、転倒はどの状態からでも考えられます。しかし、全ての状態からDAMAGE01へ矢印を貼るのは面倒すぎます。その場合は、Any State（エニーステイト） を使用します。
 
+ 
+![image](073.png)
+
 Any Stateは、条件が揃えばどこからでも移動出来る状態です。ダメージを受けた場合この項目から状態を切り替えるようにします。
 
-*  Any StateからMake TransitionでDamage01への矢印を作成します。
-*  Parametersに「＋」を選択し、Triggerを選択。条件名はDEADとします。
-*  Any StateからDmaage01への矢印を選択し、conditionの設定を「DEAD」とします。
+*  Any StateからMake TransitionでDamage01への矢印を作成します。 
+![image](074.png)
+*  Parametersに「＋」を選択し、Triggerを選択。条件名はDEADとします。 
+![image](075.png) 
+![image](076.png)
+*  Any StateからDmaage01への矢印を選択し、conditionの設定を「DEAD」とします。 
+![image](077.png) 
+![image](078.png) 
+![image](079.png) 
+![image](080.png) 
+![image](081.png)
 
 再生してみましょう。チェックを入れたり外したりする事で、アニメーションが切り替わるのが確認できます。
 <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
@@ -273,10 +348,12 @@ Any Stateは、条件が揃えばどこからでも移動出来る状態です�
 
 まずはコンポーネントを作成します。コンポーネントとはGameObjectを制御するスクリプトです。コンポーネントはその性質上、クラスとも呼ばれる事があります。Unityはコンポーネント間のメッセージのやり取り（メッセージング）と、挙動（ビヘイビア）によってゲームを構築します。
 
-まずはスクリプトを作成してみましょう。
+まずはスクリプトを作成してみましょう。 
+![image](082.png)
 
 *  プロジェクトビューのCreateをクリックし、C# Scriptを選択します。
-*  作成したScirptの名前はPlayerとします。
+*  作成したScirptの名前はPlayerとします。 
+![image](083.png)
 
 
 先ほど作成したPlayer.csをダブルクリックし・monodevelopを起動し、スクリプトを確認します。
@@ -301,9 +378,14 @@ public class Player : MonoBehaviour {
 
 <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
 
-次にヒエラルキービューからシーン内に配置したunitychanに先ほど作成したPlayerスクリプトをドラッグ＆ドロップして追加します。
+次にシーン内に配置したunitychanに先ほど作成したPlayerコンポーネントを追加します。 
+![image](084.png)
 
-*  ヒエラルキーのunitychanを選択し、インスペクタービューからAddComponent（アドコンポーネント）をクリック、Script -> Player を選択します。
+*  ヒエラルキーのunitychanを選択し、インスペクタービューからAddComponent（アドコンポーネント）をクリック、Script -> Player を選択します。 
+![image](085.png) 
+![image](086.png) 
+![image](087.png) 
+![image](088.png)
 
 うまくいかない場合、 先ほど作成したスクリプトの中の文章が、pbulic class Player ではなく public class NewBehaviourScript となっていないか確認してください。public class **** の****の項目はファイル名と一致している必要があります。
 
@@ -318,16 +400,26 @@ public class Player : MonoBehaviour {
 
 まずシーンのunitychanにRigidbodyを追加します。これは、当たり判定がある物を前進させる場合に必要なものですので、物を動かす場合（特に2D）では必ず付与して下さい。しかし今回は物理演算は不要なので、IsKinematicにチェックを入れます。この項目は、物理演算をしない場合にチェックを入れます。
 
-*  シーンのunitychanを選択し、InspectorのAdd Componentをクリックし、Physics（フィジックス）ー＞Rigidbodyを選択し、rigidbodyを追加します。
+*  シーンのunitychanを選択し、InspectorのAdd Componentをクリックし、Physics（フィジックス）ー＞Rigidbodyを選択し、rigidbodyを追加します。 
+![image](089.png) 
+![image](090.png) 
+![image](091.png) 
+![image](092.png)
 *  IsKinematicにチェックを入れます。
+![image](093.png) 
+![image](094.png)
 
 <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
 
 次にユニティちゃんを前進させます。
 
-*  先ほど作成したPlayer.csをダブルクリックし、monodevelopを起動します。
+*  先ほど作成したPlayer.csをダブルクリックし、monodevelopを起動します。 
+![image](095.png) 
 *  以下のコードの(1)を Player.csファイルのpublic class Player : MonoBehaviour { の次の行に追記して下さい。
-*  同様に、以下のコードの(2)を void Update() { の次の行、　} の間に追記して下さい。
+*  同様に、以下のコードの(2)を void Update() { の次の行、　} の間に追記して下さい。 
+![image](096.png) 
+![image](097.png) 
+![image](098.png)
 
 
 ```
@@ -389,7 +481,8 @@ public class Player : MonoBehaviour {
 同一オブジェクトからGetComponent<コンポーネント名>()で取得する事ができます。今回はAnimatorを取得するので、GetComponent<Animator>()と記載します。
 次に、取得したAnimatorのSLIDEやJUMPにチェックをスクリプトから入れます。この処理は、SetTrigger(パラメータ名)で行います。
 
-つまり、以下のコードを void Update(){から}までの間に追加します。
+つまり、以下のコードを void Update(){から}までの間に追加します。 
+![image](099.png)
 
 ```
 //(3)
@@ -405,7 +498,8 @@ GetComponent<Animator>().SetTrigger("JUMP");
 処理の分岐はif文を使用します。　この構文は、if(処理){　の処理の部分が正(true)の場合に、{の次の命令が実行される構文です。
 先ほど記述した内容(3)を削除し、以下のような処理を void Update(){から}の間のいずれかに記述しましょう。
 
-ちなみにFire1は、パッドのボタン１もしくはCtrlキーです。
+ちなみにFire1は、パッドのボタン１もしくはCtrlキーです。 
+![image](100.png)
 
 ```
 //(3)
@@ -457,30 +551,53 @@ public class Player : MonoBehaviour {
 
 まずは障害物として、薄い板のオブジェクトを作成します。
 
-*  ヒエラルキービューのCrateを選択し、Cubeを選択します。
+*  ヒエラルキービューのCrateを選択し、Cubeを選択します。 
+![image](101.png)
 *  Positionを(0, 0, 10)に設定します。
 *  Scaleの値を(3, 1, 0.05) に設定します。
-*  作成したオブジェクトの名前をLowとします。
+*  作成したオブジェクトの名前をLowとします。  
+![image](102.png) 
+![image](103.png)
 
+ 
+![image](104.png)
 これで、ハードルとなるオブジェクトが出来ました。
 次はオブジェクトの色を変更してみましょう。
 
 色を変更する一番簡単な方法は、マテリアルの色を変更する事です。この作業を行うにはマテリアルが必要です。マテリアルを作成し色を設定します。
 
-*  プロジェクトビューのCreateを選択し、Materialを選択します。
-*  ファイルが作成されますので、名前をLowMaterialに変更します。
+*  プロジェクトビューのCreateを選択し、Materialを選択します。 
+![image](105.png)
+*  ファイルが作成されますので、名前をLowMaterialに変更します。 
+![image](106.png) 
+![image](107.png)
 *  作成したマテリアルをヒエラルキービューのLowオブジェクトへドラッグ＆ドロップします。
-*  Lowオブジェクトを選択し、インスペクタービューのLow MaterialのMainColorを変更します。
+*  Lowオブジェクトを選択し、インスペクタービューのLow MaterialのMainColor選択し、カラーピックから色を変更します。
+![image](108.png)
+![image](109.png)
+![image](110.png)
+![image](111.png)
+![image](112.png)
+![image](113.png)
 
 最後に、障害物を貫通出来るように当たり判定をTriggerに設定します。Unityの当たり判定は物理演算に従い貫通しないようになっています。しかし、ハードル等は貫通する想定で考えても良いので、このLow関しては「当たったこと」を確認するためだけに使用します。Triggerに設定するには、***ColliderのオブジェクトのIsTriggerにチェックを入れます。
 
 *  LowオブジェクトのBox ColliderのIs Triggerにチェックを入れます。
+
+![image](114.png)
+![image](115.png)
+![image](116.png)
 
 ##障害物を簡単に量産可能にする
 
 障害物をコピー＆ペーストするのは良いですが、障害物を量産しやすくするためにプレハブ化を行います。プレハブ化を行う事で、特定のオブジェクトを雛形（プレハブ）とし作成・変更を簡単に出来るようになります。プレハブ化を行うには、対象のオブジェクトを選択しプロジェクトビューへドラッグ＆ドロップします。
 
 *  Lowオブジェクトを選択し、プロジェクトビューへドラッグ＆ドロップします。
+
+
+![image](117.png)
+![image](118.png)
+
 
 #障害物を回避する
 
@@ -498,6 +615,9 @@ public class Player : MonoBehaviour {
 
 *  Playerコンポーネントの void Update(){ ...中略... } の次の行に、 コード(4)を記述します。
 *  (4)で記述したコードの {と}の間に、コード(5)を記述します。
+
+
+![image](119.png)
 
 
 ```
@@ -577,7 +697,7 @@ public class Player : MonoBehaviour {
 
 ジャンプ中はオブジェクトを接触しても転倒しないようにします。
 
-今回の比較にはAnimatorの状態をそのまま使用しようと思います。プレイヤーのAnimatorの状態を取得し、ジャンプ中ならブロックに接触しても何も反応させないようにします。
+今回の比較にはAnimatorの状態をそのまま使用しようと思います。プレイヤーのAnimatorの状態を取得し、走る以外の行動中ならブロックに接触しても何も反応させないようにします。
 
 つまり、AnimatorからGetCurrentAnimatorStateInfoで状態を取得し、その値が「RUN」でないなら（ジャンプ中・もしくはスライディング中なら） 処理をスキップします。
 
@@ -658,23 +778,41 @@ public class Player : MonoBehaviour {
 
 まずはタグを作成します。
 
-*  メニューのEdit > Project Settins > Tag & Layers を選択します。
-*  インスペクタービューのTagsを開き、Elementを2に設定、HighとLowを追加します（頭大文字な点に注意して下さい）。
+*  メニューのEdit > Project Settins > Tag & Layers を選択します。  
+![image](120.png)  
+![image](121.png)
+*  インスペクタービューのTagsを開き、Elementを2に設定、HighとLowを追加します（頭大文字な点に注意して下さい）。  
+![image](122.png)  
+![image](123.png)  
+![image](124.png)  
+![image](125.png)
 
 次に、オブジェクトを作成しタグを設定します。
 
-*  ヒエラルキービューのCrateよりCubeを作成します。
-*  作成したCubeを選択し、インスペクタービューよりHighをと改名します。
-*  HighのBoxColliderのIsTriggerにチェックを入れます。
-*  作成したHighのPositionを(0, 1, 20)に設定します。
+*  ヒエラルキービューのCrateよりCubeを作成します。  
+![image](126.png)
+*  作成したCubeを選択し、インスペクタービューよりHighをと改名します。  
+![image](127.png)
+*  HighのBoxColliderのIsTriggerにチェックを入れます。    
+![image](132.png)    
+![image](133.png)
+*  作成したHighのPositionを(0, 1, 20)に設定します。  
+![image](128.png)
 *  作成したHighのScaleの値を(3, 0.5, 0.05) に設定します。
-*  HighのタグをHighに設定します。
-*  Highをプロジェクトビューへドラッグ＆ドロップしてプレハブ化します。
+*  HighのタグをHighに設定します。  
+![image](129.png)  
+![image](134.png)
+*  Highをプロジェクトビューへドラッグ＆ドロップしてプレハブ化します。    
+![image](130.png)
 
 
 ついでに、以前作成したLowオブジェクトのタグを変更しておきましょう。
 
 *  プロジェクトビューのLowプレハブを選択し、インスペクタービューでTagをLowに設定します。
+
+    
+![image](131.png)    
+![image](135.png)
 
 後は接触対象によりPlayerの振る舞いを変更します。接触対象の情報はOnTriggerEnterの引数（colider）から得ることが出来ます。多くの場合、この文字列に「.（ドット）」を追加する事で、このオブジェクトが持つパラメータや値を取得する事ができます。この機能を使用して接触対象がHighかLowか判定しましょう。
 
@@ -771,9 +909,4 @@ public class Player : MonoBehaviour {
 }
 ```
 
-
-#適当にステージを作ってみよう
-
 これで簡単なゲーム作成のチュートリアルは完了です。
-後はブロックを大量に配置することで、様々なステージが作成出来るようになりました。
-簡単なステージを作成してみましょう。
