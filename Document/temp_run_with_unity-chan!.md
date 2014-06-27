@@ -260,6 +260,8 @@ Any Stateは、条件が揃えばどこからでも移動出来る状態です�
 *  作成したScirptの名前はPlayerとします。
 
 
+先ほど作成したPlayer.csをダブルクリックし・monodevelopを起動し、スクリプトを確認します。
+
 ```
 using UnityEngine;
 using System.Collections;
@@ -280,11 +282,13 @@ public class Player : MonoBehaviour {
 
 <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
 
-作業が完了したらヒエラルキービューからシーン内に配置したunitychanに先ほど作成したPlayerスクリプトをドラッグ＆ドロップして追加します。
+次にヒエラルキービューからシーン内に配置したunitychanに先ほど作成したPlayerスクリプトをドラッグ＆ドロップして追加します。
 
-*  シーンのunitychanを選択し、InspectorからAddComponent（アドコンポーネント）をクリック、Script -> Player を選択します。
+*  ヒエラルキーのunitychanを選択し、インスペクタービューからAddComponent（アドコンポーネント）をクリック、Script -> Player を選択します。
 
 うまくいかない場合、 先ほど作成したスクリプトの中の文章が、pbulic class Player ではなく public class NewBehaviourScript となっていないか確認してください。public class **** の****の項目はファイル名と一致している必要があります。
+
+また、違うコンポーネントを追加してしまった場合やPlayerコンポーネントを複数追加してしまった場合は、コンポーネント右上の歯車をクリックし、 Remove Component を選択します。
 
 <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
 
@@ -295,13 +299,14 @@ public class Player : MonoBehaviour {
 
 まずシーンのunitychanにRigidbodyを追加します。これは、当たり判定がある物を前進させる場合に必要なものですので、物を動かす場合（特に2D）では必ず付与して下さい。しかし今回は物理演算は不要なので、IsKinematicにチェックを入れます。この項目は、物理演算をしない場合にチェックを入れます。
 
-*  シーンのunitychanを選択し、InspectorのAdd Componentをクリックし、Physics（フィジックス）ー＞Rigidbodyを選択します
-*  先ほど追加したRigidbodyコンポーネントを開き、IsKinematicにチェックを入れます。
+*  シーンのunitychanを選択し、InspectorのAdd Componentをクリックし、Physics（フィジックス）ー＞Rigidbodyを選択し、rigidbodyを追加します。
+*  IsKinematicにチェックを入れます。
 
 <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
 
 次にユニティちゃんを前進させます。
 
+*  先ほど作成したPlayer.csをダブルクリックし、monodevelopを起動します。
 *  以下のコードの(1)を Player.csファイルのpublic class Player : MonoBehaviour { の次の行に追記して下さい。
 *  同様に、以下のコードの(2)を void Update() { の次の行、　} の間に追記して下さい。
 
@@ -320,12 +325,38 @@ rigidbody.MovePosition (transform.position + transform.forward * Time.deltaTime 
 
 <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
 
+■完成形
+
+```
+using UnityEngine;
+using System.Collections;
+
+public class Player : MonoBehaviour {
+
+	// (1)
+	public float speed = 6;
+
+	void Start () {
+		
+	}
+	
+	void Update () {
+
+		// (2)
+		rigidbody.MovePosition (transform.position + transform.forward * Time.deltaTime * speed);
+
+	}
+}
+```
+
+
+
 ##カメラを追随させる
 
 このままでは、カメラを放置してユニティちゃんが走りだしてしまいます。カメラを追随させる一番簡単な方法は、ユニティちゃんの子オブジェクトとしてカメラを配置する事です。カメラをユニティちゃんの子オブジェクトとして配置しましょう。
 
-*  シーン内のunitychanへMainCameraをドラッグ＆ドロップして親子構造を作ります。
-*  カメラのpositionを(0, 2.3, -3)、rotationを( 26, 0, 0)を設定します。
+*  ヒエラルキービューのunitychanへMainCameraをドラッグ＆ドロップして親子構造を作ります。
+*  MainCameraのpositionを(0, 2.3, -3)、rotationを( 26, 0, 0)を設定します。
 
 <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
 
@@ -334,7 +365,7 @@ rigidbody.MovePosition (transform.position + transform.forward * Time.deltaTime 
 
 次にボタンを押すとジャンプ・スライディングするように設定します。
 
-ジャンプ・スライディングさせるには、Playerコンポーネントから別のコンポーネントへアクセスする必要があります。それが同一オブジェクトへ登録されているコンポーネントであれば、ユニティは非常に簡単にコンポーネントを取得する事が可能です。
+ジャンプ・スライディングさせるには、Playerコンポーネントから別のコンポーネントへアクセスする必要があります。
 
 同一オブジェクトからGetComponent<コンポーネント名>()で取得する事ができます。今回はAnimatorを取得するので、GetComponent<Animator>()と記載します。
 次に、取得したAnimatorのSLIDEやJUMPにチェックをスクリプトから入れます。この処理は、SetTrigger(パラメータ名)で行います。
@@ -347,7 +378,6 @@ GetComponent<Animator>().SetTrigger("JUMP");
 ```
 
 シーンを再生しましょう。ユニティちゃんがウサギの如く跳ねながら前進していくのが分かります。これは、毎フレームJUMPにチェックが入っているのが原因です。この対策に、入力があった場合のみJUMPにチェックが入るように修正します。
-
 
 <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
 
@@ -371,6 +401,34 @@ Fire2はAltです。上手くいけば、AltとCtrlでジャンプ・スライ�
 
 <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■　SAVE　■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  -->
 
+■完成形
+
+```
+using UnityEngine;
+using System.Collections;
+
+public class Player : MonoBehaviour {
+
+	// (1)
+	public float speed = 6;
+
+	void Start () {
+		
+	}
+	
+	void Update () {
+
+		// (2)
+		rigidbody.MovePosition (transform.position + transform.forward * Time.deltaTime * speed);
+
+		
+		//(3)
+		if( Input.GetButtonDown("Fire1")){
+			GetComponent<Animator>().SetTrigger("JUMP");
+		}
+	}
+}
+```
 
 #障害物を配置する
 
@@ -436,6 +494,45 @@ GetComponent<Animator>().SetBool ("DEAD", true);
 speed = 0;
 ```
 
+■完成形
+
+```
+using UnityEngine;
+using System.Collections;
+
+public class Player : MonoBehaviour {
+
+	// (1)
+	public float speed = 6;
+
+	void Start () {
+		
+	}
+	
+	void Update () {
+
+		// (2)
+		rigidbody.MovePosition (transform.position + transform.forward * Time.deltaTime * speed);
+
+		
+		//(3)
+		if( Input.GetButtonDown("Fire1")){
+			GetComponent<Animator>().SetTrigger("JUMP");
+		}
+	}
+
+	// (4)
+	void OnTriggerEnter (Collider colider)
+	{
+		// (5)
+		GetComponent<Animator>().SetBool ("DEAD", true);
+		speed = 0;
+	}
+}
+```
+
+
+
 ##ユニティちゃんに当たり判定を付ける
 
 再生して見て下さい。接触しても何も反応が無いと思います。
@@ -479,6 +576,49 @@ if( isRun == true )
 	speed = 0;
 }
 
+```
+
+■完成形
+```
+using UnityEngine;
+using System.Collections;
+
+public class Player : MonoBehaviour {
+
+	// (1)
+	public float speed = 6;
+
+	void Start () {
+		
+	}
+	
+	void Update () {
+
+		// (2)
+		rigidbody.MovePosition (transform.position + transform.forward * Time.deltaTime * speed);
+
+		
+		//(3)
+		if( Input.GetButtonDown("Fire1")){
+			GetComponent<Animator>().SetTrigger("JUMP");
+		}
+	}
+
+	// (4)
+	void OnTriggerEnter (Collider colider)
+	{
+		// (6)
+		var stateInfo = GetComponent<Animator>().GetCurrentAnimatorStateInfo (0);
+		bool isRun = stateInfo.IsName("Base Layer.RUN00_F");
+
+		// (7)
+		if( isRun == true )
+		{
+			GetComponent<Animator>().SetTrigger ("DEAD");
+			speed = 0;
+		}
+	}
+}
 ```
 
 ##ジャンプとスライディングで障害物を回避する
