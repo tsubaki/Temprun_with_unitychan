@@ -417,9 +417,6 @@ public class Player : MonoBehaviour {
 ![image](095.png) 
 *  以下のコードの(1)を Player.csファイルのpublic class Player : MonoBehaviour { の次の行に追記して下さい。
 *  同様に、以下のコードの(2)を void Update() { の次の行、　} の間に追記して下さい。   
-![image](096.png)   
-![image](097.png)  
-![image](098.png)  
 
 
 ```
@@ -482,7 +479,6 @@ public class Player : MonoBehaviour {
 次に、取得したAnimatorのSLIDEやJUMPにチェックをスクリプトから入れます。この処理は、SetTrigger(パラメータ名)で行います。
 
 つまり、以下のコードを void Update(){から}までの間に追加します。  
-![image](099.png)
 
 ```
 //(3)
@@ -499,7 +495,6 @@ GetComponent<Animator>().SetTrigger("JUMP");
 先ほど記述した内容(3)を削除し、以下のような処理を void Update(){から}の間のいずれかに記述しましょう。
 
 ちなみにFire1は、パッドのボタン１もしくはCtrlキーです。  
-![image](100.png)
 
 ```
 //(3)
@@ -615,9 +610,6 @@ public class Player : MonoBehaviour {
 
 *  Playerコンポーネントの void Update(){ ...中略... } の次の行に、 コード(4)を記述します。
 *  (4)で記述したコードの {と}の間に、コード(5)を記述します。
-
-
-![image](119.png)  
 
 
 ```
